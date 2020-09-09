@@ -1,0 +1,6 @@
+{
+    "programmer": "AVR ISP",
+    "board": "arduino:avr:uno",
+    "port": "COM7",
+    "sketch": "pilotage_ventilateur_2___4_broches.ino"
+}

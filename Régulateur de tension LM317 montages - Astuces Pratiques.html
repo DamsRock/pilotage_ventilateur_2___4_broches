@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" lang="fr"><head>
+
+    <title>Régulateur de tension LM317 : montages - Astuces Pratiques</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+            <meta name="robots" content="index,follow">
+        <meta name="description" content="Classiques ou astucieux, les montages à bases du régulateur de tension LM317 sont nombreux et aideront à la conception d'alimentations stabilisées, mais">
+    <link rel="icon" type="image/png" href="https://cdn1.astuces-pratiques.fr/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.astuces-pratiques.fr/img/apple/apple-touch-icon-w.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.astuces-pratiques.fr/img/apple/apple-touch-icon-72x72-w.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.astuces-pratiques.fr/img/apple/apple-touch-icon-114x114-w.png">
+    <link rel="apple-touch-icon" sizes="129x129" href="https://www.astuces-pratiques.fr/img/apple/apple-touch-icon-129x129-w.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.astuces-pratiques.fr/img/apple/apple-touch-icon-144x144-w.png">
+    <link href="https://www.astuces-pratiques.fr/img/android/android-128x128.png" rel="icon" sizes="192x192">
+    <link href="https://www.astuces-pratiques.fr/img/android/android-192x192.png" rel="icon" sizes="128x128">
+
+    <link rel="dns-prefetch" href="https://cdn1.astuces-pratiques.fr/">
+    <link rel="dns-prefetch" href="https://cdn2.astuces-pratiques.fr/">
+    <link rel="dns-prefetch" href="https://cdn3.astuces-pratiques.fr/">
+
+            <link rel="canonical" href="https://www.astuces-pratiques.fr/electronique/regulateur-de-tension-lm317-montages">
+        <script type="text/javascript" async="" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/analytics.js"></script><script type="application/ld+json">
+     {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "@id":"https://www.astuces-pratiques.fr/#website",
+        "url":"https://www.astuces-pratiques.fr",
+        "name":"Astuces Pratiques",
+        "alternateName": "Trucs et astuces, pratiques et utiles",
+        "sameAs": [
+            "https://www.facebook.com/astupratiques/"
+        ],
+        "about" : {
+            "@type": "Thing",
+            "name":"Trucs et astuces, pratiques et utiles"
+        },
+        "dateCreated" : "2009-03-05",
+        "dateModified" : "2020-09-08",
+        "editor" : "APRACORP",
+        "publisher" : "APRACORP",
+        "keywords" : "Trucs,Astuces pratiques",
+        "text" : "Notre site internet d'entraide recense actuellement plus de 4600 trucs et astuces, et tutoriels dans de nombreux domaines. Nos trucs et astuces sont de qualité supérieure du fait de leur modération et illustrations, et cela dans des domaines très variés et ciblés comme l'informatique, l'électronique, high-tech, auto-moto, bricolage, jardinage, bois, santé, cuisine, droit, finance",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.astuces-pratiques.fr/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Corporation",
+        "@id": "https://www.astuces-pratiques.fr/#organization",
+        "name": "APRACORP",
+        "legalName": "APRACORP SAS",
+        "description": "Trucs et astuces, pratiques et utiles",
+        "url": "https://www.astuces-pratiques.fr/",
+        "logo": "https://www.astuces-pratiques.fr/img/logoap.png",
+         "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Strasbourg",
+            "postalCode": "67100",
+            "streetAddress": "20 avenue du neuhof"
+        },
+        "email": "apratiques@gmail.com",
+        "foundingDate": "2009-03-05",
+        "owns" : {
+        "@type": "Thing",
+            "name" : "Trucs et astuces, pratiques et utiles"
+        },
+        "knowsAbout" : "Trucs et astuces, pratiques et utiles"
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org/",
+    "@type":"SoftwareApplication",
+    "name":"www.astuces-pratiques.fr",
+    "operatingSystem":"Web-based",
+    "applicationCategory":"Comparator",
+    "aggregateRating": {
+        "@type":"AggregateRating",
+        "bestRating":"5",
+        "worstRating":"0",
+        "ratingValue":"4.6",
+        "ratingCount":"127"
+     },
+     "offers": {
+        "@type":"Offer",
+        "price":"0.00",
+        "priceCurrency":"EUR"
+     }
+ }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type":"Article",
+        "mainEntityOfPage":
+        {
+            "@type":"URL",
+            "@id":"https://www.astuces-pratiques.fr/electronique/regulateur-de-tension-lm317-montages"
+        },
+
+        "headline":"Régulateur de tension LM317 : montages - Astuces Pratiques",
+        "dateCreated":"2011-12-07T10:48",
+        "datePublished":"2011-12-07T10:48",
+        "dateModified":"2020-04-02T16:39",
+        "publisher":
+        {
+            "@type":"Organization",
+            "name":"Astuces Pratiques",
+            "logo":
+            {
+                "@type":"ImageObject",
+                "url":"https://www.astuces-pratiques.fr/img/logo.png",
+                "width":"140",
+                "height":"145"
+            }
+        },
+        "description":"Classiques ou astucieux, les montages à bases du régulateur de tension LM317 sont nombreux et aideront à la conception d'alimentations stabilisées, mais"
+                ,"author":
+        {
+            "@type":"Person",
+            "name":"nina67"
+                                ,"image":
+            {
+                "@type": "ImageObject",
+                "url": "https://www.astuces-pratiques.fr/profile/photos/24.jpg",
+                "width":"100",
+                "height":"100"
+            }
+                            }
+                        
+                ,"image":
+        {
+            "@type":"ImageObject",
+            "url":"https://www.astuces-pratiques.fr/imagesarticles/24/regulateur-de-tension-lm317-montages.png",
+            "height":"326",
+            "width":"420"
+
+        }
+
+            }
+</script>
+
+        <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+         "@type": "BreadcrumbList",
+         "itemListElement":
+         [
+                        {
+                "@type": "ListItem",
+                "position": 1,
+                "item":
+                {
+                    "@type": "Thing",
+                    "@id": "https://www.astuces-pratiques.fr/electronique",
+                    "name": "Electronique"
+                                    }
+            }
+                ,
+                                                        {
+                "@type": "ListItem",
+                "position": 2,
+                "item":
+                {
+                    "@type": "Thing",
+                    "@id": "https://www.astuces-pratiques.fr/electronique/conception-electronique.html",
+                    "name": "Conception électronique"
+                                    }
+            }
+                ,
+                                                        {
+                "@type": "ListItem",
+                "position": 3,
+                "item":
+                {
+                    "@type": "Thing",
+                    "@id": "https://www.astuces-pratiques.fr/electronique/regulateur-de-tension-lm317-montages",
+                    "name": "Régulateur de tension LM317 : montages"
+                                        ,"image": "https://www.astuces-pratiques.fr/imagesarticles/24/regulateur-de-tension-lm317-montages.png"
+                                    }
+            }
+                                                    ]
+     }
+
+</script>
+        <script async="" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-3927745-1');
+</script>
+
+    <script async="" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/adsbygoogle.js"></script>
+
+    <link rel="alternate" type="application/rss+xml" title="Les derniers articles en rss" href="https://www.astuces-pratiques.fr/rss">
+    <style> #commentform textarea, #commentform input[type="text"], #commentform input[type="email"] { padding: 12px; border-width: 0; color: #999; background-color: #eee; font-size: 18px; line-height: 1em; width:calc(100% - 24px); margin: 5px 0; border-radius: 6px; outline: none; } #commentform .commenttitle { margin: 20px 0 5px 0; display: block; } #commentform .commenttitle:before { content: 'Soumettre un commentaire'; } #commentform .response:before { content: 'Annuler la réponse'; color:rgba(3, 122, 186, 1); font-size: 14px; font-weight: 700; } .response { display: block; margin: 10px 0; cursor: pointer; } .commentaire-user { min-height: 35px; } #commentform .commentinfo:before { content: 'Votre adresse de messagerie ne sera pas publiée.'; color: #888; font-size: 14px; } #commentform .addcomment, .commentaire-text .responsecomment { background: #fff; border-radius: 4px; padding: 5px 10px; color: rgba(3, 122, 186, 1); border: 3px solid rgba(3, 122, 186, 1); float: right; margin-bottom: 20px; margin-top: 5px; outline: none; cursor:pointer; } .commentaire .commentaire-text { position:relative; } .inputfile { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; } .removefile { vertical-align: top; background: indianred; color: white; border-radius: 6px; cursor: pointer; } .inputfile + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.3rem 0.5rem; color: #444; } .inputfile:focus + label, .inputfile.has-focus + label { outline: 1px dotted #000; outline: -webkit-focus-ring-color auto 5px; } .inputfile + label * { } .inputfile + label svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; margin-right: 0.25em; } .commentaire-text img { display: block; max-width: 100%; height: auto; margin: 0 auto; padding-top: 10px; padding-bottom: 10px; } .commentaire.level_2 { margin-left: 30px; } .commentaire.level_3 { margin-left: 60px; } .commentaire.level_4, .commentaire.level_5 { margin-left: 90px; }   button, input, optgroup, select, textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; } label { display: inline-block; margin-bottom: .5rem; font-size: 12px; color: #aaa; } .form-group { margin-bottom: 1rem; } .form-control { display: block; width: calc(100% - 1.5rem); height: calc(1.5em + .75rem + 2px); padding: .375rem .75rem; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: .25rem; transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; } textarea { height: 150px !important; } select.form-control { height: 3em; width: 100%; } .btn { display: inline-block; font-weight: 400; color: #212529; text-align: center; vertical-align: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: transparent; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; margin-bottom: 20px; } .btn-primary { color: #fff; background-color: #007bff; border-color: #007bff; } .alert-success { color: #155724; background-color: #d4edda; border-color: #c3e6cb; } .alert-warning { color: #856404; background-color: #fff3cd; border-color: #ffeeba; } .alert-danger { color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; } .alert { position: relative; padding: .75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: .25rem; }  html { line-height: 1.15; -webkit-text-size-adjust: 100%; overflow-y: scroll; } body { margin: 0; } main { display: block; } h1 { font-size: 2em; margin: 0.67em 0; } hr { box-sizing: content-box; height: 0; overflow: visible; } pre { font-family: monospace, monospace; font-size: 1em; } a { background-color: transparent; } abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; } b, strong { font-weight: bolder; } code, kbd, samp { font-family: monospace, monospace; font-size: 1em; } small { font-size: 80%; } sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -0.25em; } sup { top: -0.5em; } img { border-style: none; } button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; } button, input { overflow: visible; } button, select { text-transform: none; } button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; } button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; } fieldset { padding: 0.35em 0.75em 0.625em; } legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; } progress { vertical-align: baseline; } textarea { overflow: auto; } [type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; } [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; } [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; } [type="search"]::-webkit-search-decoration { -webkit-appearance: none; } ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } details { display: block; } summary { display: list-item; } template { display: none; } [hidden] { display: none; } button { background: 0 0; border: none; } .hidden { display:none !important; } .qc-cmp-persistent-link { display: none !important; } table.table { border-collapse: collapse; } .table { width: 100%; margin-bottom: 1rem; color: #212529; } .table td, .table th { padding: .75rem; vertical-align: top; border-top: 1px solid #dee2e6; } .table thead th { vertical-align: bottom; border-bottom: 2px solid #dee2e6; } .table td a { text-decoration: none; } @media (max-width : 640px) { .btn-xs.btn-primary.secondbtn { text-decoration: none; } .btncontainer { text-align:center; margin-top: 20px; } } .text-center { text-align: center; } .clearfixwithtop { margin-top: 20px; } .annonce:after { content: "Publicité"; text-align: center; display: block; color: #555; font-size: 14px; margin-bottom: 5px; margin-top: 15px; } .annoncecontainer { height: 322px; width: 100%; display: block; } article .annoncecontainer { height: 312px; } .annonce { display: block; height: 12px; width: 100%; }  main.cate_2 h2, main.cate_2 h3, main.cate_2 p a, article a { color:rgba(3, 130, 120, 1); } .alistingtitle.cat_2, main article h1 { background: rgba(3, 130, 120, 1); }    div.users-rating-picture { display: inline-block; width: 100px; height: 100%; } div.users-rating-content { display: inline-block; vertical-align: super; } div.users-rating { cursor: pointer; width: 100%; display: block; position: relative; padding-bottom: 20px; padding-top: 20px; background:#f0f0f0; } .users-rating-baseline, .users-rating-title { font-size: 13px; margin: 0; text-align: center; } .users-rating .users-rating-stars-rating { height: 24px; padding: 0 10px; margin: 4px auto; border: 1px solid #c8c8c8; border-radius: 12px; width: 160px; } .users-rating .users-rating-stars { position: relative; width: 90px; height: 16px; left: 0; top: 3px; margin: 0 14px 0 0; display: inline-block; border-right: 0; background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 136 24'%3E%3Cpath fill='lightgray' d='M12 0l3.7 8L24 9.2l-6.1 6.1 1.5 8.7-7.4-4.2L4.6 24l1.5-8.7L0 9.2 8.3 8 12 0zm28 0l3.7 8L52 9.2l-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7L28 9.2 36.3 8 40 0zm28 0l3.7 8L80 9.2l-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7L56 9.2 64.3 8 68 0zm28 0l3.7 8 8.3 1.2-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7L84 9.2 92.3 8 96 0zm28 0l3.7 8 8.3 1.2-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7-6.1-6.1 8.3-1.2 3.7-8z'/%3E%3C/svg%3E"); } .users-rating .users-rating-note { display: inline-block; font-size: 13px; } .users-rating .users-rating-note span { font-size: 13px; } .users-rating .users-rating-stars-score { position: absolute; top: 0; left: 0; width: 90px; height: 16px; background-repeat: no-repeat; background-size: 5.6rem 1rem; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 136 24'%3E%3Cpath fill='%23f5a422' d='M12 0l3.7 8L24 9.2l-6.1 6.1 1.5 8.7-7.4-4.2L4.6 24l1.5-8.7L0 9.2 8.3 8 12 0zm28 0l3.7 8L52 9.2l-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7L28 9.2 36.3 8 40 0zm28 0l3.7 8L80 9.2l-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7L56 9.2 64.3 8 68 0zm28 0l3.7 8 8.3 1.2-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7L84 9.2 92.3 8 96 0zm28 0l3.7 8 8.3 1.2-6.1 6.1 1.5 8.7-7.4-4.2-7.4 4.2 1.5-8.7-6.1-6.1 8.3-1.2 3.7-8z'/%3E%3C/svg%3E"); } .display-none { display: none; }  article { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; flex-direction: column; position: relative; width: 100%; height: auto; flex-wrap: wrap; margin: 0; box-sizing: border-box; } article h1, article .article, article .social, article .articleinfos, article .bottomarticle { position: relative; display: block; width: 100%; height: auto; box-sizing: border-box; } article h1 { order:1; margin: 0.67em 0 0 0 !important; } article .article { order:5; } article .breadcrumbcontainer { order:2; } article .social { order:3; } article .articleinfos { order:4; margin: 0; height: 40px; padding: 0; display: block; } article .bottomarticle { order:5; } article p { margin-bottom: 20px; line-height: 1.7; margin-top: 10px; text-align: justify; } article ul { padding: 0 2em; } article ul li { list-style: outside none none; display: list-item; text-align: -webkit-match-parent; padding: 4px 0; } article ul li::before { content: url('data:image/svg+xml; utf8, <svg width="14" height="14" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z" fill="grey"/></svg>'); display: inline-block; width: 14px; height: 14px; margin-left: -1.2em; margin-right: 5px; vertical-align: middle; } article img { display: block; max-width: 100%; height: auto; margin: 0 auto; } .navbar-fixed-bottom { position: fixed; right: 0; left: 0; z-index: 1030; bottom:0; }  .breadcrumb { padding: 0 15px; margin-bottom: 2px; list-style: none; background-color: #f5f5f5; border-radius: 0 0 6px 6px; margin: 0; } .breadcrumb>li { display: inline-block; } .container .breadcrumb>li+li:before { content: url('data:image/svg+xml; utf8, <svg width="14" height="14" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1152 896q0 26-19 45l-448 448q-19 19-45 19t-45-19-19-45v-896q0-26 19-45t45-19 45 19l448 448q19 19 19 45z" fill="dimgrey"/></svg>'); vertical-align: middle; width: 14px; height: 14px; } .breadcrumb>li+li:before { padding: 0 5px; color: #ccc; } .breadcrumb>li+li:before { content: ""; padding: 0 5px; color: #ccc; } .breadcrumb a { color:darkslategrey; text-decoration: none; } .breadcrumbcontainer { width: 100%; line-height: 37px; margin: 0; padding: 0; display: block; }  body { font-family: Helvetica,Arial,sans-serif; background: #fff; color: #444; font-size: 17px; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; padding-top: 75px; } body>.maincontainer { margin-bottom: 80px; border-bottom: 1px solid rgba(0,0,0,.1); box-shadow: 0 0 10px rgba(0,0,0,.1); border-radius: 6px; margin-top: 20px; min-height: 500px; background: #fff; } aside, main { position: relative; background-color: #fff; } div.article { margin: 0; padding: 0; display: block; min-height: 500px; width: 100%; } aside { width: 33.33333333%; float:left; } main { width: 66.66666667%; float:right; } .clearfix:before, .clearfix:after { content: " "; display: table; clear: both; } @media (max-width: 767px) { aside { display: none; } main { width: 100%; float:right; } } .alistingtitle { background-color: #038ad6; color: #fff; margin-bottom: 10px; margin-top: 10px; border-radius: 6px; display: inline-block; width: calc(100% - 10px); text-decoration: none; font-weight: 600; font-size: 16px; padding-left: 10px; line-height: 40px; overflow: hidden; position: relative; } .alistingconteneur { display: flex; align-content:space-between; position: relative; width: 100%; height: 175px; } .alisting { width: 25%; text-decoration: none; position: relative; margin: 0 4px; } .alisting img { display: block; width: 100%; height: auto; margin: 0; border-radius: 10px; } .alistingimg { position: relative; display: block; height: 120px; width: 100%; } .alisting span.title { font-size: 13px; margin:0 0 0 5px; color: #222; display: block; overflow: hidden; line-height: 1.5em; font-weight: 600; width: 100%; height: 4.5em; } .cover { z-index: 2; -webkit-transition: transform .2s; -moz-transition: transform .2s; -ms-transition: transform .2s; -o-transition: transform .2s; transition: transform .2s; } .alisting .alistingimg:hover + .cover { -webkit-transform: translate(-4px, -3px); -moz-transform: translate(-4px, -3px); -ms-transform: translate(-4px, -3px); -o-transform: translate(-4px, -3px); transform: translate(-4px, -3px); } .alisting img { -webkit-transition: transform .2s; -moz-transition: transform .2s; -ms-transition: transform .2s; -o-transition: transform .2s; transition: transform .2s; } .alisting img:hover { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05); } .cover { position:absolute; font-weight: 600; font-size: 12px; font-family: Helvetica,Arial,sans-serif; color:#fff; top: 0px; left: 0px; padding:4px 2px; border-radius: 10px 10px 10px 0; min-width: 110px; text-transform: uppercase; text-align: center; } .top .categorie.cat_1:before, .cover.cat_1:before { content:'Informatique'; } .top .categorie.cat_2:before, .cover.cat_2:before { content:'Electronique'; } .top .categorie.cat_3:before, .cover.cat_3:before { content:'High-Tech'; } .top .categorie.cat_4:before, .cover.cat_4:before { content:'Auto-Moto'; } .top .categorie.cat_5:before, .cover.cat_5:before { content:'Bois'; } .top .categorie.cat_6:before, .cover.cat_6:before { content:'Maison'; } .top .categorie.cat_7:before, .cover.cat_7:before { content:'Jardin'; } .top .categorie.cat_8:before, .cover.cat_8:before { content:'Santé'; } .top .categorie.cat_9:before, .cover.cat_9:before { content:'Cuisine'; } .top .categorie.cat_10:before, .cover.cat_10:before { content:'Finance'; } .top .categorie.cat_12:before, .cover.cat_12:before { content:'Téléchargement'; } .top .categorie.cat_13:before, .cover.cat_13:before { content:'Droit'; } .top .cat_0, h1.cat_0,.title.cat_0 { background-color: #038ad6; color:#fff; } .top .cat_1, h1.cat_1, .alistingtitle.cat_1, .cover.cat_1 { background-color: rgba(19, 129, 155, 1); color:#fff; } .top .cat_2, h1.cat_2, .alistingtitle.cat_2, .cover.cat_2 { background-color: rgba(3, 130, 120, 1); color:#fff; } .top .cat_3, h1.cat_3, .alistingtitle.cat_3, .top .cat_12, h1.cat_12, .alistingtitle.cat_12, .cover.cat_12, .cover.cat_3 { background-color: rgba(98, 98, 98, 1); color:#fff; } .top .cat_4, h1.cat_4, .alistingtitle.cat_4, .cover.cat_4 { background-color: rgba(232, 33, 23, 1); color:#fff; } .top .cat_5, h1.cat_5, .alistingtitle.cat_5, .cover.cat_5 { background-color: rgba(170, 92, 44, 1); color:#fff; } .top .cat_6, h1.cat_6, .alistingtitle.cat_6, .cover.cat_6 { background-color: rgb(224, 152, 5); color:#fff; } .top .cat_7, h1.cat_7, .alistingtitle.cat_7, .cover.cat_7 { background-color: rgba(108, 124, 9, 1); color:#fff; } .top .cat_8, h1.cat_8, .alistingtitle.cat_8, .cover.cat_8 { background-color: rgba(230, 0, 97, 1); color:#fff; } .top .cat_9, h1.cat_9, .alistingtitle.cat_9, .cover.cat_9 { background-color: rgba(145, 24, 202, 1); color:#fff; } .top .cat_10, h1.cat_10, .alistingtitle.cat_10, .cover.cat_10 { background-color: rgba(60, 134, 14,1); color:#fff; } .top .cat_13, h1.cat_13, .alistingtitle.cat_13, .cover.cat_13 { background-color: rgba(142, 113, 62, 1); color:#fff; } .adsensecontainerdiv { margin-right: 15px; } .top { margin-right: 35px; margin-top: 15px; } .title { font-size: 16px; padding-left: 10px; line-height: 40px; font-weight: 900; border-radius: 6px; } .top .categorie { position:absolute; font-weight: 600; font-size: 12px; font-family: Helvetica,Arial,sans-serif; color:#fff; top: 0px; padding:4px 2px; border-radius: 10px; min-width: 110px; text-transform: uppercase; text-align: center; } .top .toptext { position: absolute; margin: 30px 5px 0 0; line-height: 1.2em; height: 2.4em; overflow: hidden; font-weight: 600; } .top a { margin: 15px 0 0 0; padding-bottom: 15px; width: 100%; display: block; text-decoration: none; color: #545454; font-size: 16px; position: relative; } .top a:not(:nth-last-child(2)) { margin: 15px 0; } .top img { border-radius: 10px; margin-left: 15px; margin-right: 15px; } .top>a:not(:nth-last-child(2)):before { content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 80%; margin-left: 10%; border-bottom: 1px dashed #ccc; } stop { stop-opacity:1; } stop.stop1 { stop-color:orange; } stop.stop2 { stop-color: grey; } .smallrating { vertical-align: text-top; } .ratingconteneur { float: right; } .stars-btn { margin:0 !important; float:right; } .author img { vertical-align: middle; border-radius: 50%; margin: 0 10px 10px 10px; width: 30px; display: inline-block; } .author { width:70%; display: inline-block; vertical-align: text-top; font-size: 14px; } .rating { width:28%; display: inline-block; vertical-align: text-top; } .update { white-space: nowrap; background: lightgreen; border-radius: 4px; padding: 2px; margin-left: 4px; } h1 { width: calc(100% - 10px); font-size: 22px; padding-left: 10px; line-height: 40px; font-weight: 900; color:#fff; border-radius: 6px 6px 0 0; } .commentaire { background: #f5f5f5; font-size: .875em; width: auto; margin: 5px 0; padding: 4px 10px; position: relative; border-radius: 3px; background-clip: padding-box; } .commentaire .pull-right { margin-right: .3em; float: right; font-weight: 600; font-size: .875em; } .commentaire small { right: 10px; float: right; font-weight: 200; } .commentaire .commentaire-user .no-user{ background-clip: padding-box; border-radius: 50%; color: #fff; display: block; float: left; font-size: 2.0em; height: 30px; line-height: 43px; margin-right: 15px; text-align: center; width: 30px; overflow: hidden; background-color: #dedede; } .commentaire .commentaire-user .no-user:after { content:url('data:image/svg+xml; utf8, <svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1536 1399q0 109-62.5 187t-150.5 78h-854q-88 0-150.5-78t-62.5-187q0-85 8.5-160.5t31.5-152 58.5-131 94-89 134.5-34.5q131 128 313 128t313-128q76 0 134.5 34.5t94 89 58.5 131 31.5 152 8.5 160.5zm-256-887q0 159-112.5 271.5t-271.5 112.5-271.5-112.5-112.5-271.5 112.5-271.5 271.5-112.5 271.5 112.5 112.5 271.5z" fill="white"></path></svg>'); overflow: hidden; } .commentaire .commentaire-user img{ border-radius: 50%; float: left; } .commentaire .commentaire-text { width:100%; clear: both; } .commentaire .commentaire-text p{ font-size: 14px; word-wrap: break-word; line-height: 1.7; white-space: pre-line; } a.amazon { display: inline-block; background: #efefef; border-radius: 4px; width: 100%; margin-bottom: 5px; } a.amazon .amazon-img { float: left; border: 1px solid #ccc; border-radius: 10px; margin: 15px 7px; } a.amazon span.title { display: inline-block; margin: 30px 0; overflow: hidden; padding: unset; float: left; width: 65%; height: 2.4em; color: #444; font-size: 15px; } a.amazon .offer { display: inline-block; float: right; margin: 10px 10px 0 10px; } a.amazon .amazon-title { width: 70%; display: inline-block; } a.amazon .offer .btn { cursor: pointer; border-radius: 4px; padding: 5px 14px; font-weight: 400; font-size: 13px; font-family: "Tahoma", Arial; color: #111; background-color: #febd69; border-color: rgb(166, 130, 38); } a.amazon .price { font-size:16px; color: #373737; text-align: center; font-weight: 600; margin-top: 6px; } a.amazon .oldprice { font-size:12px; color:#0f192a; text-align: center; text-decoration: line-through; } .adsbygoogle { margin: 10px auto; }  footer { width: 100%; background-color: #fff; border-bottom: 4px solid #1077bc; border-top: 1px solid #ccc; margin-top: 50px; } footer p { margin: 10px 5px; font-size: 14px; width: calc(50% - 20px); display: inline-block; } footer p:nth-child(2) { text-align: right; } footer p:nth-child(2) a { text-decoration: none; color:#444; padding-right: 10px; }  header > nav.header { border-bottom: 1px solid rgba(0,0,0,.1); box-shadow: 0 0 10px rgba(0,0,0,.1); margin-bottom: 0; background-color: #038ad6; position: fixed; width: 100%; right: 0; left: 0; z-index: 1030; top: 0; } header a.navbar-brand { height: 72px; width: 227px; background: url('/img/logoap.png') no-repeat; display: inline-block; } .container { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; } @media (min-width: 768px) { .container { width: 770px; } main { width: 510px !important; } aside { width: 240px !important; } } @media (min-width: 1007px) { .container { width: 1005px; } main { width: 630px !important; } aside { width: 350px !important; } } @media (min-width: 1215px) { .container { width: 1205px; } main { width: 770px !important; } aside { width: 410px !important; } } .pull-right { display: inline-block; float: right; } ul.pull-right, .menu ul { list-style: none; margin: 0; position: relative; padding: 0; } li.navibar { border-left: 1px solid #04659c; text-align: center; float: left; padding: 10px 0 0 0; cursor: pointer; } li.navibar:hover { background-color: #047ec2; } .searchcontainer { margin: 18px; } .searchcontainer button { background: powderblue; border-radius: 0 6px 6px 0; vertical-align: bottom; padding: 3px 9px 4px 9px; margin-left: -5px; cursor: pointer; } #search { width: auto; border: none; padding: 9px 20px; border-radius: 6px 0 0 6px; margin: 0; outline: none; } @media (min-width: 1200px) { #search { width: 400px; } } li.navibar>span, li.navibar>a { padding: 0 10px; color: #fff; margin: 0; font-weight: 600; font-size: 11px; line-height: 26px; text-transform: uppercase; display: block; text-decoration: none; } header > nav.menu { background: #fff; box-shadow: 0 0 100px rgba(0,0,0,.15); height: 50px; } .dropdown { position: relative; } .dropdown-menu { position: absolute !important; top: calc(100% + 4px); left: 0; z-index: 1000; display: none; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; list-style: none; font-size: 14px; text-align: left; background-color: #fff; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.15); border-radius: 0 0 4px 4px; -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175); box-shadow: 0 6px 12px rgba(0,0,0,0.175); -webkit-background-clip: padding-box; background-clip: padding-box; } .open>.dropdown-menu { display: block; } .dropdown-menu>li>a { display: block !important; padding: 10px 20px !important; clear: both; font-weight: normal; line-height: 1.42857143 !important; color: #333 !important; white-space: nowrap; cursor: pointer; font-size: 14px !important; text-transform: none !important; } header > nav.menu ul>li>a { margin-top: 5px; line-height: 23px; font-size: 16px; text-transform: uppercase; text-decoration: none; color: #545454; position: relative; display: block; padding: 10px 15px; } @media (max-width: 1199px) and (min-width: 992px) { header > nav.menu ul>li>a { font-size: 14px; padding-left: 10px; padding-right: 10px; } } @media (max-width: 991px) and (min-width: 768px) { header > nav.menu ul>li>a { font-size: 11px; padding-left: 7px; padding-right: 7px; } } @media (max-width: 767px) { header > nav.menu ul>li>a { font-size: 11px; padding-left: 7px; padding-right: 7px; } header > nav.menu { height:104px; } ul.pull-right { display: none; } .searchcontainer { display:none; } } header > nav.menu > .container > ul>li { float: left; } nav.menu .container>ul>li:hover>a, nav.menu .container>ul>li>ul>li>a:hover { color:#fff !important; } nav.menu .container>ul>li.informatique:hover, nav.menu .container>ul>li.informatique>ul>li>a:hover { background-color: #13819A; } nav.menu .container>ul>li.electronique:hover, nav.menu .container>ul>li.electronique>ul>li>a:hover { background-color: rgba(3, 130, 120, 1); } nav.menu .container>ul>li.high-tech:hover, nav.menu .container>ul>li.high-tech>ul>li>a:hover { background-color: rgba(98, 98, 98, 1); } nav.menu .container>ul>li.auto-moto:hover, nav.menu .container>ul>li.auto-moto>ul>li>a:hover { background-color: rgba(232, 33, 23, 1); } nav.menu .container>ul>li.bois:hover, nav.menu .container>ul>li.bois>ul>li>a:hover { background-color: rgba(170, 92, 44, 1); } nav.menu .container>ul>li.maison:hover, nav.menu .container>ul>li.maison>ul>li>a:hover { background-color: rgb(224, 152, 5);; } nav.menu .container>ul>li.jardin:hover, nav.menu .container>ul>li.jardin>ul>li>a:hover { background-color: rgba(108, 124, 9, 1); } nav.menu .container>ul>li.sante:hover, nav.menu .container>ul>li.sante>ul>li>a:hover { background-color: rgba(230, 0, 97, 1); } nav.menu .container>ul>li.cuisine:hover, nav.menu .container>ul>li.cuisine>ul>li>a:hover { background-color: rgba(145, 24, 202, 1); } nav.menu .container>ul>li.finance:hover, nav.menu .container>ul>li.finance>ul>li>a:hover { background-color: rgba(60, 134, 14,1); } nav.menu .container>ul>li.droit:hover, nav.menu .container>ul>li.droit>ul>li>a:hover { background-color: rgba(142, 113, 62, 1); } nav.menu .container>ul>li.informatique { border-bottom:4px solid #13819A; } nav.menu .container>ul>li.electronique { border-bottom:4px solid rgba(3, 130, 120, 1); } nav.menu .container>ul>li.high-tech { border-bottom:4px solid rgba(98, 98, 98, 1); } nav.menu .container>ul>li.auto-moto { border-bottom:4px solid rgba(232, 33, 23, 1); } nav.menu .container>ul>li.bois { border-bottom:4px solid rgba(170, 92, 44, 1); } nav.menu .container>ul>li.maison { border-bottom:4px solid rgb(224, 152, 5); } nav.menu .container>ul>li.jardin { border-bottom:4px solid rgba(108, 124, 9, 1); } nav.menu .container>ul>li.sante { border-bottom:4px solid rgba(230, 0, 97, 1); } nav.menu .container>ul>li.cuisine { border-bottom:4px solid rgba(145, 24, 202, 1); } nav.menu .container>ul>li.finance { border-bottom:4px solid rgba(60, 134, 14,1); } nav.menu .container>ul>li.droit { border-bottom:4px solid rgba(142, 113, 62, 1); }  .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); } .modal.open { display: block; } .modal-content { background-color: #fefefe; margin: 15% auto; border: none; border-radius: 6px; width: 80%; } .modal-header, .modal-body, .modal-footer { padding: 20px; } .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; } .close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; } #trustpilote .modal-content { background-color: #0090c8; } #trustpilote .close, #trustpilote .close:hover, #trustpilote .close:focus { color: white; }  .social { position: relative; background-color: #fff; width: 100%; display: inline-block; padding-top:3px; margin: 0; height: 40px; } .social button { font-size: 14px !important; font-weight: 600 !important; border-color: unset !important; border-radius: 20px !important; color: #fff; display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; width: 100%; } .social svg { width: 16px; height: 16px; vertical-align: middle; margin-right: 5px; } .social > div { width: 25%; float: left; } .social > div:first-child { width: 16.66666667%; } .social.fixed { position: fixed; z-index: 999; top:77px; } .adsense-static.fixed { top: 80px; position: fixed; z-index: 999; } .sharecount { color: #999; float: left; font-size: 27px; font-weight: bold; line-height: 10px; margin-top: 10px; text-align: center; } .sharecounttxt { font-size: 8px; font-weight: normal; text-transform: uppercase; } .facebookbtn { background-color: #3b5998 !important; } .facebookbtn:hover { background-color: #2f477b !important; } .twitterbtn { background-color: #00aced !important; } .twitterbtn:hover { background-color: #0098d1 !important; } .copyurlbtn { background-color: #858585 !important; } .copyurlbtn:hover { background-color: #616161 !important; } </style>
+
+
+    <meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Régulateur de tension LM317 : montages - Astuces Pratiques">
+<meta property="og:description" content="Classiques ou astucieux, les montages à bases du régulateur de tension LM317 sont nombreux et aideront à la conception d'alimentations stabilisées, mais">
+<meta property="og:url" content="https://www.astuces-pratiques.fr/electronique/regulateur-de-tension-lm317-montages">
+<meta property="og:site_name" content="AstucesPratiques">
+<meta property="article:section" content="Informatique, Electronique, high-tech, auto-moto, bois, maison et bricolage, diy, jardinage, santé, cuisine, finance et droit">
+<meta property="article:published_time" content="2011-12-07T10:48+00:00">
+                
+            <meta property="og:image" content="https://www.astuces-pratiques.fr/imagesarticles/24/regulateur-de-tension-lm317-montages.png">
+        <meta property="og:image:secure_url" content="https://www.astuces-pratiques.fr/imagesarticles/24/regulateur-de-tension-lm317-montages.png">
+        <meta property="og:image:width" content="420">
+        <meta property="og:image:height" content="326">
+        <meta name="twitter:image" content="https://www.astuces-pratiques.fr/imagesarticles/24/regulateur-de-tension-lm317-montages.png">
+
+    
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Classiques ou astucieux, les montages à bases du régulateur de tension LM317 sont nombreux et aideront à la conception d'alimentations stabilisées, mais">
+<meta name="twitter:title" content="Régulateur de tension LM317 : montages - Astuces Pratiques">
+</head>
+<body>
+    <header>
+    <nav class="header">
+        <div class="navbar-header container">
+            <a class="navbar-brand" href="https://www.astuces-pratiques.fr/" aria-label="Astuces pratiques page d'accueil" name="astuces pratiques"></a>
+
+            <ul class="pull-right">
+
+
+                <li class="navibar" onclick="window.location.replace('/telecharger');">
+                    <svg width="36" height="36" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z" fill="white"></path></svg>
+                    <a href="https://www.astuces-pratiques.fr/telecharger">Télécharger</a>
+                </li>
+                                    <li class="navibar" onclick="login();">
+                        <svg width="36" height="36" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1536 1399q0 109-62.5 187t-150.5 78h-854q-88 0-150.5-78t-62.5-187q0-85 8.5-160.5t31.5-152 58.5-131 94-89 134.5-34.5q131 128 313 128t313-128q76 0 134.5 34.5t94 89 58.5 131 31.5 152 8.5 160.5zm-256-887q0 159-112.5 271.5t-271.5 112.5-271.5-112.5-112.5-271.5 112.5-271.5 271.5-112.5 271.5 112.5 112.5 271.5z" fill="white"></path></svg>
+                        <span>Mon compte</span>
+                    </li>
+                
+            </ul>
+            <div class="searchcontainer pull-right">
+                <input type="search" name="search" id="search" placeholder="Recherche" aria-label="Recherche">
+                <button class="searchbtn" id="searchbtn" aria-label="Valider" onclick="searchvalidation();">
+                    <svg width="26" height="26" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" fill="white"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <nav class="menu">
+    <div class="container">
+        <ul>
+                            <li class="dropdown informatique" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/informatique" title="Informatique">Informatique</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/cours-sur-bases-informatique.html" title="Cours sur les bases de l'informatique">Cours sur les bases de l'informatique</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/cours-sur-reseaux.html" title="Cours sur les réseaux">Cours sur les réseaux</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/optimisation-systemes-exploitation.html" title="Optimisation des systèmes d'exploitation">Optimisation des systèmes d'exploitation</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/securite-sauvegardes.html" title="Sécurité et sauvegardes">Sécurité et sauvegardes</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/depannage-et-maintenance.html" title="Dépannage et maintenance">Dépannage et maintenance</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/multimedia-utilitaires.html" title="Multimédia et utilitaires">Multimédia et utilitaires</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/bureautique.html" title="Bureautique">Bureautique</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/internet-reseaux.html" title="Internet et réseaux">Internet et réseaux</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/ergonomie-et-personnalisation.html" title="Ergonomie et personnalisation">Ergonomie et personnalisation</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/mac.html" title="Mac">Mac</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/email-messagerie.html" title="Email et messagerie">Email et messagerie</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/linux.html" title="Linux">Linux</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/informatique/infographie-pao.html" title="Infographie et PAO">Infographie et PAO</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown electronique" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/electronique" title="Electronique">Electronique</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/electronique/cours-electronique.html" title="Cours d’électronique">Cours d’électronique</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/electronique/conception-electronique.html" title="Conception électronique">Conception électronique</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/electronique/realisation-electronique.html" title="Réalisation électronique">Réalisation électronique</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/electronique/astuces-electroniques.html" title="Les astuces électroniques">Les astuces électroniques</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown high-tech" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/high-tech" title="High-tech">High-tech</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/image-et-son.html" title="Image et son">Image et son</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/telephonie-et-agenda.html" title="Téléphonie et agenda">Téléphonie et agenda</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/auto-moto-et-gps.html" title="Gps et accessoires auto">Gps et accessoires auto</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/jeux-video.html" title="Jeux vidéo">Jeux vidéo</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/iphone-ipod-ipad.html" title="IPhone iPod iPad">IPhone iPod iPad</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/blackberry.html" title="Blackberry">Blackberry</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/android.html" title="Android">Android</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/high-tech/windows-phone.html" title="Windows Phone">Windows Phone</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown auto-moto" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/auto-moto" title="Auto-moto">Auto-moto</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/automobile.html" title="Automobile">Automobile</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/poid-lourd.html" title="Poid lourd">Poid lourd</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/moto-et-motocycle.html" title="Moto et motocycle">Moto et motocycle</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/cyclo-et-scooter.html" title="Cyclo et scooter">Cyclo et scooter</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/assistance-et-info-route.html" title="Assistance et info route">Assistance et info route</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/carroserie-optique-et-tuning.html" title="Carroserie optique et tuning">Carroserie optique et tuning</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/auto-moto/sono.html" title="Sono">Sono</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown bois" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/bois" title="Bois">Bois</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/bois/ebenisterie.html" title="Ebénisterie">Ebénisterie</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/bois/marqueterie.html" title="Marqueterie">Marqueterie</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/bois/menuiserie.html" title="Menuiserie">Menuiserie</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/bois/sculpture.html" title="Sculpture">Sculpture</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/bois/tournage.html" title="Tournage">Tournage</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/bois/types-et-essences-de-bois.html" title="Types et essences de bois">Types et essences de bois</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown maison" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/maison" title="Maison">Maison</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/nettoyage.html" title="Nettoyage">Nettoyage</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/divers.html" title="Divers">Divers</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/bricolage-interieur.html" title="Bricolage interieur">Bricolage interieur</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/decoration.html" title="Décoration">Décoration</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/brico-exterieur.html" title="Brico extérieur">Brico extérieur</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/enfant.html" title="Enfant">Enfant</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/maison/animaux.html" title="Animaux">Animaux</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown jardin" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/jardin" title="Jardin">Jardin</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/jardin/entretien-des-outils.html" title="Entretien des outils">Entretien des outils</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/jardin/entretien-jardin.html" title="Entretien jardin">Entretien jardin</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/jardin/plantation.html" title="Plantation">Plantation</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/jardin/divers-jardin.html" title="Astuces diverses pour le jardin">Astuces diverses pour le jardin</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown sante" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/sante" title="Sante">Sante</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/nutrition.html" title="Nutrition">Nutrition</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/regime.html" title="Régime">Régime</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/bien-etre.html" title="Bien-être">Bien-être</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/beaute.html" title="Beauté">Beauté</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/sexualite.html" title="Sexualité">Sexualité</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/maternite.html" title="Maternité">Maternité</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/sante/soins-et-remedes.html" title="Soins et remèdes">Soins et remèdes</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown cuisine" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/cuisine" title="Cuisine">Cuisine</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/entree.html" title="Entrée">Entrée</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/plat.html" title="Plat">Plat</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/dessert.html" title="Dessert">Dessert</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/cocktail.html" title="Cocktail ">Cocktail </a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/astuces-cuisine.html" title="Astuces cuisine">Astuces cuisine</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/cuisine-vegetale.html" title="Cuisine végétale">Cuisine végétale</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/boissons.html" title="Boissons">Boissons</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/patisserie.html" title="Pâtisserie">Pâtisserie</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/soupes.html" title="Soupes">Soupes</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/cuisine/sauces.html" title="Sauces">Sauces</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown finance" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/finance" title="Finance">Finance</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/finance/gagner-de-l-argent.html" title="Gagner de l'argent">Gagner de l'argent</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/finance/economiser-de-l-argent.html" title="Economiser de l'argent">Economiser de l'argent</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/finance/bon-plan.html" title="Bon plan">Bon plan</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/finance/banque-et-assurance.html" title="Banque et assurance">Banque et assurance</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/finance/investissement-et-economie.html" title="Investissement et économie">Investissement et économie</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                            <li class="dropdown droit" onmouseover="mouseoverMenu(this);" onmouseleave="mouseleaveMenu(this);">
+                    <a href="https://www.astuces-pratiques.fr/droit" title="Droit">Droit</a>
+
+                    <ul class="dropdown-menu">
+                                                                                    <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/taxe-et-fiscalite.html" title="Taxes et Fiscalité">Taxes et Fiscalité</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/travail.html" title="Travail">Travail</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/famille.html" title="Famille">Famille</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/patrimoine-et-succession.html" title="Patrimoine et succession">Patrimoine et succession</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/droit-civil.html" title="Droit civil">Droit civil</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/convention-collective.html" title="Convention collective">Convention collective</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/entreprises.html" title="Entreprises">Entreprises</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.astuces-pratiques.fr/droit/aides-et-subventions.html" title="Aides et subventions">Aides et subventions</a>
+                                </li>
+                                                                        </ul>
+                </li>
+                    </ul>
+    </div>
+
+</nav></header>    <div class="maincontainer container active" data-url="/electronique/regulateur-de-tension-lm317-montages" data-title="R%C3%A9gulateur%20de%20tension%20LM317%20%3A%20montages">
+        <main class="cate_2">
+                <article>
+
+
+
+                <h1>Régulateur de tension LM317 : montages</h1>
+    <div class="article">
+
+        <div class="annoncecontainer">
+            <div class="annonce"></div>
+                <ins class="adsbygoogle" style="display:block; margin-bottom: 20px;" data-ad-client="ca-pub-7305140069236820" data-ad-slot="8098023485" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+        </div>
+                    
+                        
+        <p>Classiques ou astucieux, les montages à bases du régulateur 
+de tension LM317 sont nombreux et aideront à la conception 
+d'alimentations stabilisées, mais aussi de fonctions logiques de 
+comparaison avec un seuil. Le LM317 est un composant électronique très 
+utilisé.</p>                        
+                    <div class="annonce"></div>
+                <ins class="adsbygoogle" style="display:block; margin-bottom: 20px;" data-ad-client="ca-pub-7305140069236820" data-ad-slot="2763945481" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+            <p>Voici différents montages à partir du régulateur de tension LM317.</p>
+<h2>Description du régulateur LM317</h2>
+<p>Le LM317 est un régulateur série à 3 pattes capable de fournir 1,5 
+Ampère sur une tension de sortie qui va de 1,25 à 37 Volts. Le LM317 est
+ d'une facilité d'utilisation exceptionnelle et nécessite seulement 2 
+résistances externes pour fixer sa tension de sortie. De plus, la 
+réjection de l'alimentation ainsi que l'insensibilité aux impacts de 
+charge en font un régulateur avantageux. Le LM317, en boitier standard, 
+se manipule aisément.</p>
+<p>Le LM317 est protégé contre les courts-circuits, la surchauffe, même 
+si la patte d'ajustement se trouve accidentellement déconnectée.</p>
+<p>Normalement, aucun condensateur n'est nécessaire, à moins que le 
+LM317 soit à plus de 15 cm de condensateurs déjà en place. Un 
+condensateur supplémentaire permet d'augmenter encore la réjection de 
+l'alimentation.. Etant donné que le LM317 est "flottant" (pas de 
+connexion directe à la masse), il ne voit que la tension entre son 
+entrée et sa sortie, il peut réguler des alimentations de 100 Volts et 
+plus, dans la mesure où la tension maximale entrée - sortie n'est pas 
+dépassée, c'est-à-dire que la sortie n'est pas court-circuitée.</p>
+<p>Le LM317 est ainsi un régulateur ajustable simple, mais aussi 
+programmable ou peut encore être utilisé en source de courant constant. 
+Une coupure électronique peut être réalisée en reliant la patte 
+d'ajustement à la masse, ce qui réduit la tension de sortie à 1,25 Volt.
+ La plupart des charges consomment alors peu de courant.</p>
+<p>Pour de plus fort courants, le LM150 (3A) et le LM138 (5A) sont aussi
+ utilisables. Pour des tensions négatives, le LM137 convient.</p>
+<p>En résumé, le LM317 offre :</p>
+<p>- précision de la tension de sortie : 1%</p>
+<p>- courant de sortie : 1,5 A minimum (2,2 A typiques)</p>
+<p>- protection contre les courts-circuits</p>
+<p>- limitation en courant indépendante de la température</p>
+<p>- réjection de l'alimentation : 80 dB</p>
+<p>- dissipation totale Ptot (boitier à 25°C) : 25 Watts</p>
+<h2>Comment brancher un LM317</h2>
+<p>En boitier TO220, le LM317 doit se connecter ainsi :</p>
+
+<p><img class="regulateur-de-tension-lm317-montages-0" title="regulateur de tension lm317 montages 0" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages.png" alt="regulateur de tension lm317 montages 0" width="420" height="326"></p>
+<p>Brochage (pinout) du LM317</p>
+<ul>
+<li>Vout : sortie (reliée au boitier "Tab")</li>
+<li>Vin : entrée</li>
+<li>ADJ : patte d'ajustement</li>
+</ul>
+<p>Note : ce n'est pas identique au régulateur 7805 ! Il n'est pas compatible broche à broche.</p>
+<p>Le boitier ("Tab") est relié à la patte du milieu qui est la sortie : "Tab is output" comme on dit de l'autre côté de la Manche.</p>
+<h2>Montages du régulateur de tension LM317</h2>
+<p>Ci dessous, plus de 10 montages à base de LM317 sont présentés.</p>
+<h3>Alimentation stabilisée 1,25 à 25 Volts</h3>
+<p>Voici une alimentation ajustable de 1,25 à 25 Volts :</p>
+<p><img class="regulateur-de-tension-lm317-montages-1" title="regulateur de tension lm317 montages 1" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-0.png" alt="regulateur de tension lm317 montages 1" width="490" height="298"></p>
+<p>LM317 en alimentation stabilisée (montage de base)</p>
+<p>La tension de sortie vaut : 1,25 Volt x (1 + R2/R1)</p>
+<p>Pour un fonctionnement correct, la tension d'entrée doit être 
+supérieure de 3 Volts à la tension de sortie maximale. Si la sortie du 
+LM317 doit pouvoir aller jusqu'à 25 Volts, la tension d'entrée doit être
+ de 28 Volts minimum.</p>
+<p><strong>R1 ne doit pas dépasser 240 Ohms pour garantir au moins 5 mA 
+de courant de sortie. Si cela n'est pas respecté, la tension de sortie 
+devient plus élevée et n'est plus régulée.</strong></p>
+<p>Le LM317 n'est pas intéressant pour des courants de sortie faibles 
+(quelques mA), mieux vaut alors choisir des régulateurs "micropower".</p>
+<h3>Alimentation stabilisée 5V / 1A avec coupure</h3>
+<p><img class="regulateur-de-tension-lm317-montages-2" title="regulateur de tension lm317 montages 2" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-1.png" alt="regulateur de tension lm317 montages 2" width="550" height="300"></p>
+<p>LM317 en alimentation stabilisée avec coupure</p>
+<p>La tension de sortie vaut 5 Volts si l'entrée TTL n'est reliée à rien
+ ou à la masse. Lorsque l'entrée TTL est à 5 Volts, le transistor 
+court-circuite R2 et la tension de sortie passe à 1,25 Volt. Avec une 
+alimentation de 1,25 Volt, la plupart des circuits consomment très peu 
+et sont ainsi en veille.</p>
+<h3>Temporisation sur alimentation stabilisée 15V</h3>
+<p><img class="regulateur-de-tension-lm317-montages-3" title="regulateur de tension lm317 montages 3" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-2.png" alt="regulateur de tension lm317 montages 3" width="550" height="370"></p>
+<p>LM317 en alimentation avec temporisation</p>
+<p>C1 se charge progressivement par R3 et assure via T1 ainsi une montée
+ en tension très progressive à la sortie. La constante de temps vaut R3 x
+ C1. D1 assure une décharge rapide de C1 lorsque la tension d'entrée est
+ coupée.</p>
+<h3>Alimentation stabilisée 1,25 à 25 Volts améliorée</h3>
+<p> Voici le schéma avec LM317 :</p>
+<p><img class="regulateur-de-tension-lm317-montages-4" title="regulateur de tension lm317 montages 4" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-3.png" alt="regulateur de tension lm317 montages 4" width="550" height="300"></p>
+<p>LM317 en alimentation stabilisée</p>
+<p>L'ajout de C3 fait passer la réjection de l'alimentation de 60 à 80 
+dB. D1 évite que la patte ADJ du LM317 soit à un potentiel supérieur à 
+la patte de sortie si la sortie est court-circuitée par exemple.</p>
+<h3>Alimentation stabilisée 0V à 25V</h3>
+<p>Pour pouvoir descendre jusqu'à 0V avec un LM317 :</p>
+<p><img class="regulateur-de-tension-lm317-montages-5" title="regulateur de tension lm317 montages 5" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-4.png" alt="regulateur de tension lm317 montages 5" width="545" height="451"></p>
+<p>LM317 en alimentation stabilisée</p>
+<p>La tension de sortie vaut : 1,25 V x R2/R1</p>
+<p>Ici, le LM113 est une diode zener de 1,2V polarisée par R3. En 
+reliant R2 au potentiel de -1,2V, on permet au LM317 de fournir une 
+tension qui "commence" à 0V au lieu de 1,25V.</p>
+<h3>Source de courant 1A à LM317</h3>
+<p>Le montage du LM317 en source de courant (en fait, en <em>limiteur</em> de courant) :</p>
+<p><img class="regulateur-de-tension-lm317-montages-6" title="regulateur de tension lm317 montages 6" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-5.png" alt="regulateur de tension lm317 montages 6" width="490" height="298"></p>
+<p>Source de courant à LM317</p>
+<p>Le courant de sortie vaut 1,25V/R1. Cette source de courant 
+fonctionne tant que la tension de sortie ne s'approche pas trop de la 
+tension d'entrée (chute de tension Vin-Vout = 2,0V à 1A). Attention 
+aussi à la dissipation thermique du LM317 si la différence Vin-Vout est 
+trop grande.</p>
+<h3>Source de courant variable à LM317</h3>
+<p> Voici le schéma de la source de courant (pour chargeur de batterie par exemple) :</p>
+<p><img class="regulateur-de-tension-lm317-montages-7" title="regulateur de tension lm317 montages 7" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-6.png" alt="regulateur de tension lm317 montages 7" width="542" height="307"></p>
+<p>Source de courant variable à LM317</p>
+<p>Le courant de sortie vaut 1,25V/P1. P1 est un potentiomètre de puissance.</p>
+<h3>Alimentation stabilisée limitée en courant</h3>
+
+<p><img class="regulateur-de-tension-lm317-montages-8" title="regulateur de tension lm317 montages 8" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-7.png" alt="regulateur de tension lm317 montages 8" width="550" height="455"></p>
+<p>La tension de sortie est défnie par 1,25 V x (1 + (R2/R1)). Lorsque 
+la tension aux bornes de R3 atteint 0,6 V, le transistor entre en 
+conduction et réduit la tension aux bornes de R2 et donc la tension de 
+sortie.</p>
+<p>Le courant de court-circuit est défini par : 0,6 V / R3</p>
+<p>On choisit R4 = 2.R3 pour que la tension aux bornes de R4 atteigne 
+1,2 V (2 x 0,6 V) et compense la tension entre Vout et ADJ. La tension 
+de sortie tombe ainsi bien à 0V.</p>
+<h3>Alimentation double à 2 LM317</h3>
+
+<p><img class="regulateur-de-tension-lm317-montages-9" title="regulateur de tension lm317 montages 9" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-8.png" alt="regulateur de tension lm317 montages 9" width="550" height="260"></p>
+<p>Alimentation double à 2 LM317</p>
+<p>Le potentiomètre R2 ajuste les 2 tensions de sorties qui sont 
+toujours identiques, sauf en cas de court-circuit. R1 assure la charge 
+minimum de 10mA (valeur recommandée par le constructeur dans ce cas).</p>
+<h3>Montage de 2 LM317 en parallèle : alimentation 3A</h3>
+
+<p><img class="regulateur-de-tension-lm317-montages-10" title="regulateur de tension lm317 montages 10" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-9.png" alt="regulateur de tension lm317 montages 10" width="550" height="500"></p>
+<p>LM317 en parallèle</p>
+<p>R2 ajuste la tension de sortie. R3 et R4 assurent un équilibrage des courant de sortie. La chute de tension à 3 A est de :</p>
+<p>1,5A x 0,22 Ohm = 0,33V</p>
+<h3>Chargeur 13,8V pour batterie de voiture avec LM317</h3>
+
+<p><img class="regulateur-de-tension-lm317-montages-11" title="regulateur de tension lm317 montages 11" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-10.png" alt="regulateur de tension lm317 montages 11" width="520" height="340"></p>
+<p>Chargeur de batterie avec LM317</p>
+<p>Il s'agit d'une source de tension limitée en courant.</p>
+<p>L'impédance de sortie élevée permet de réduire le courant lorsque la batterie est pleine.</p>
+<h3>Chargeur pour piles non rechargeables</h3>
+<p>Pour créer une tension de 1,70V, un régulateur LM317 fait très bien l'affaire.</p>
+
+<p><img class="regulateur-de-tension-lm317-montages-12" title="regulateur de tension lm317 montages 12" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-11.png" alt="regulateur de tension lm317 montages 12" width="545" height="233"></p>
+<p><img class="regulateur-de-tension-lm317-montages-13" title="regulateur de tension lm317 montages 13" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages_002.jpg" alt="regulateur de tension lm317 montages 13" width="550" height="535"></p>
+<p>Chargeur artisanal pour piles non rechargeables !</p>
+
+<p><img class="regulateur-de-tension-lm317-montages-14" title="regulateur de tension lm317 montages 14" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-0.jpg" alt="regulateur de tension lm317 montages 14" width="550" height="413"></p>
+<p>Détail sur les 2 LM317 de cette réalisation...</p>
+<p>Tension de sortie = 1,25 V x (1 + R2/R1) = 1,25 V x (1 + 75/220) = 1,68 V</p>
+<p>On peut remplacer R2 (et non R1 !) par un potentiomètre de 100 Ohms. 
+La valeur de R1 est liée au fonctionnement du LM317 et ne doit pas être 
+modifiée.</p>
+<p>Pour plus de détails sur le chargeur de piles non rechargeables :</p>
+<p><a href="https://www.astuces-pratiques.fr/electronique/recharger-des-piles-alcalines-non-rechargeables">Chargeur 1,7V pour piles alcalines</a></p>
+<p>La résistance R se calcule pour limiter le courant de charge à 100 mA (une bonne valeur pour commencer):</p>
+<p>R = (Tension d'entrée - 3,3V) / 0,1A</p>
+<p>La tension 3,3 V est la tension approximative sur la patte Vin du 
+LM317. Elle vaut sa tension de sortie (1,68 V) additionnée à la tension 
+de déchet (1,6 V environ pour 100 mA).</p>
+<h2>Montages avec régulateur TL431</h2>
+<p>Si vous cherchez d'autres montages d'alimentations stabilisées diverses, le TL431 peut aussi être utilisé :</p>
+<p><a href="https://www.astuces-pratiques.fr/electronique/regulateur-et-reference-de-tension-tl431-montages">Montages avec TL431</a></p>
+<p><strong>Conclusion sur le LM317</strong></p>
+<p>Le LM317 est facile d'utilisation pour réaliser des alimentations 
+stabilisées en tension et/ou limitées en courant. La consommation de 
+repos de 5mA minimum du LM317 ne le rend pas avantageux pour des 
+montages très faible consommation. En revanche, son courant disponible 
+de 1,5 A minimum et ses protections le rendent polyvalent pour bien des 
+applications.</p>
+<p><img class="regulateur-de-tension-lm317-montages-15" title="regulateur de tension lm317 montages 15" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages-1.jpg" alt="regulateur de tension lm317 montages 15" width="292" height="190"></p>
+<p>LM317 monté sur un dissipateur</p>        
+    </div>
+
+    <div class="breadcrumbcontainer">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="https://www.astuces-pratiques.fr/" title="Trucs et astuces, pratiques et utiles"><svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1472 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 .5-3t.5-3l575-474 575 474q1 2 1 6zm223-69l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z" fill="dimgrey"></path></svg> </a></li>
+                    <li class="breadcrumb-item"><a href="https://www.astuces-pratiques.fr/electronique">Electronique</a></li>
+                    <li class="breadcrumb-item"><a href="https://www.astuces-pratiques.fr/electronique/conception-electronique.html">Conception électronique</a></li>
+                    <li class="breadcrumb-item"><a href="https://www.astuces-pratiques.fr/electronique/regulateur-de-tension-lm317-montages">Régulateur de tension LM317 : montages</a></li>
+            </ol>
+</div>    <div class="social fixed" style="width:770px">
+    <div class="sharecount">0<br><span class="sharecounttxt">Partages</span></div>
+    <div class="facebook">
+        <button class="facebookbtn" onclick="sharefacebook();" aria-label="Partager sur Facebook">
+            <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" fill="white"></path></svg> Facebook
+        </button>
+    </div>
+    <div class="twitter">
+        <button class="twitterbtn" onclick="sharetwitter();" aria-label="Partager sur Twitter">
+            <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="white"></path></svg> Twitter
+        </button>
+    </div>
+    <div class="copyurl">
+        <button class="copyurlbtn" id="copy" onclick="copy();" aria-label="Copier le lien">
+            <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="white"></path></svg> Copier l'URL
+        </button>
+    </div>
+</div>
+    <div class="articleinfos">
+        <div class="author">
+                                                                <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/24.jpg" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" class="img-circle" alt="nina67 - Régulateur de tension LM317 : montages" width="30" height="30">
+            Nina67 - Le 7 déc. 2011 à 11:48<span class="update"> Mise à jour : Le 2 avr. 2020 à 18:39</span>        </div>
+        <div class="rating">
+                    </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bottomarticle">
+        
+            </div>
+
+
+
+
+
+
+</article>
+<section>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-7305140069236820" data-ad-slot="9505700728"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div class="alistingconteneur">
+                        <a href="https://www.astuces-pratiques.fr/electronique/chargeur-de-piles-non-rechargeable-realisation" title="Chargeur de piles non rechargeable : réalisation" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/image/electronique/chargeur-de-piles-non-rechargeable-realisation/1_chargeur-de-piles-non-rechargeable-realisation-0.jpg" alt="Chargeur de piles non rechargeable realisation 0" title="Chargeur de piles non rechargeable realisation 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">Chargeur de piles non rechargeable : réalisation</span>
+        </a>
+                            <a href="https://www.astuces-pratiques.fr/electronique/la-resistance-association-en-serie-et-parallele" title="La résistance: Association en série et parallèle" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn1.astuces-pratiques.fr/image/electronique/la-resistance-association-en-serie-et-parallele/1_la-resistance-association-en-serie-et-parallele-0.jpg" alt="la resistance association en serie et parallele 0" title="la resistance association en serie et parallele 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">La résistance: Association en série et parallèle</span>
+        </a>
+                            <a href="https://www.astuces-pratiques.fr/electronique/la-resistance-mise-en-pratique" title="La résistance: Mise en pratique" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/la-resistance-mise-en-pratique/1_la-resistance-mise-en-pratique-0.jpg" alt="la resistance mise en pratique 0" title="la resistance mise en pratique 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">La résistance: Mise en pratique</span>
+        </a>
+                            <a href="https://www.astuces-pratiques.fr/electronique/la-resistance-description-et-definition" title="La résistance: Description et définition" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/la-resistance-description-et-definition/1_la-resistance-description-et-definition-0.jpg" alt="la resistance description et definition 0" title="la resistance description et definition 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">La résistance: Description et définition</span>
+        </a>
+                                </div><div class="alistingconteneur">
+                <a href="https://www.astuces-pratiques.fr/electronique/les-portes-logiques-de-base-electronique-binaire" title="Les portes logiques de base : électronique binaire" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/image/electronique/les-portes-logiques-de-base-electronique-binaire/1_les-portes-logiques-de-base-electronique-binaire-0.jpg" alt="les portes logiques de base electronique binaire 0" title="les portes logiques de base electronique binaire 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">Les portes logiques de base : électronique binaire</span>
+        </a>
+                            <a href="https://www.astuces-pratiques.fr/electronique/la-resistance-le-code-des-couleurs" title="La résistance: Le code des couleurs" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn1.astuces-pratiques.fr/image/electronique/la-resistance-le-code-des-couleurs/1_la-resistance-le-code-des-couleurs-0.jpg" alt="la resistance le code des couleurs 0" title="la resistance le code des couleurs 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">La résistance: Le code des couleurs</span>
+        </a>
+                            <a href="https://www.astuces-pratiques.fr/electronique/la-resistance-pont-diviseur-de-tension" title="La résistance: Pont diviseur de tension" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/image/electronique/la-resistance-pont-diviseur-de-tension/1_la-resistance-pont-diviseur-de-tension-0.jpg" alt="la resistance pont diviseur de tension 0" title="la resistance pont diviseur de tension 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">La résistance: Pont diviseur de tension</span>
+        </a>
+                            <a href="https://www.astuces-pratiques.fr/electronique/la-resistance-limitation-de-courant" title="La résistance: Limitation de courant" class="alisting">
+            <span class="alistingimg">
+                            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/la-resistance-limitation-de-courant/1_la-resistance-limitation-de-courant-0.jpg" alt="la resistance limitation de courant 0" title="la resistance limitation de courant 0" width="184" height="120">                        </span>
+            <span class="cover cat_2"></span>
+            <span class="title">La résistance: Limitation de courant</span>
+        </a>
+            </div>
+<div class="clearfix"></div></section>
+<section>
+        <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Nu                        </span>
+            <br>
+            <small>Le 8 déc. 2011 à 09:42</small>
+        </div>
+        <div class="commentaire-text">
+            <p>aluile</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 509)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Tatan                        </span>
+            <br>
+            <small>Le 23 sept. 2013 à 13:01</small>
+        </div>
+        <div class="commentaire-text">
+            <p>bonjour, 
+
+bravo pour se poste, j'aimerais savoir si les résistances à placer dans le montage de deux lm317 en parralélle son des résistances de puissance? merci</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 3249)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 23 sept. 2013 à 14:17</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour,
+Les résistances n'ont pas besoin d'être de forte puissance vu que même si il circule 1A, la dissipation ne sera que 0.22 x 1² = 0.22W. Cela dit, on peut tout de même choisir des résistances 1W pour être sur (en cas de court circuit sur la sortie, le courant limite peut atteindre 2.5A environ). Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 3250)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Tatan                        </span>
+            <br>
+            <small>Le 23 sept. 2013 à 16:00</small>
+        </div>
+        <div class="commentaire-text">
+            <p>super, merci pour la réponse rapide, bien cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 3254)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Tatan                        </span>
+            <br>
+            <small>Le 23 sept. 2013 à 16:47</small>
+        </div>
+        <div class="commentaire-text">
+            <p>juste pour être bien sûre, est ce que ce montage diminue ou coupe  la tension de sortie quand elle s'approche  trop de la tension d'entrée? dsl pour toutes c'est questions,  je débute. merci, cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 3256)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Jonas                        </span>
+            <br>
+            <small>Le 12 févr. 2016 à 18:24</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Toutes mes excuz pr une question bête.Si la pile est non rechargeable,pourquoi faire encore un chargeur pr la recharger?.Elle ne va pas s'eclater?.merci.</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 8457)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 15 févr. 2016 à 22:20</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Jonas,  vous pouvez réaliser un chargeur pour piles alcalines standard non rechargeables. Le montage limite la tension à 1,65V environ, ce qui évite à la plupart des piles d'exploser (fuites). http://www.astuces-pratiques.fr/electronique/chargeur-de-piles-non-rechargeable-realisation</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 8477)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Bino                         </span>
+            <br>
+            <small>Le 9 juil. 2016 à 19:05</small>
+        </div>
+        <div class="commentaire-text">
+            <p>pour une tension d'entrée 5.34V , quelles sont les valeur de résistances afin d'avoir une tension de sortie 5V merci</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9159)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 18 juil. 2016 à 07:18</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Bino, Il ne sera pas possible de faire du 5V à partir de 5.34V, le LM317 présente une chute de tension de 2V environ. Au mieux, on pourra obtenir autour de 3.3V à partir de 5.34V.  Il faut un régulateur linéaire "low drop" (LDO). Par exemple, le LM2940 (existe en version de tension fixe 5.0V). Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9181)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Chimère                        </span>
+            <br>
+            <small>Le 14 sept. 2016 à 06:27</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, ... je tombe sur votre post en cherchant partout un schéma... Celui d'un régulateur de tension pour une vieille moto. La bobine sort une centaine de watts, la tension évoluant entre 2/3v à bas régime et plus de vingt quand on monte dans les tours. Il y a un redresseur, mais le régulateur est mort. Je cherche donc le schéma d'un régulateur capable de bloquer à 6 volts -comme d'origine - ou à 12 volts - plus facile de trouver des ampoules ! - le courant produit par la bobine... Je suis une pince en électronique ( mais je peux échanger contre des travaux au tour ou à la fraise ) et de toutes mes recherches je n'ai tiré que la nécessité d'un triac...
+Et la complexité du choix de celui-ci qui doit couper dès le démarrage et être bien adapté et bien épaulé par zeners et résistances adéquates...  Si vous avez cinq minutes pour me conseiller...
+Très cordialement </p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9378)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 15 sept. 2016 à 09:16</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Chimère, j'ai trouvé ce lien qui peut donner une idée d'un régulateur rudimentaire... http://www.motos-anglaises.com/phpBB3/viewtopic.php?t=27432</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9382)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Dama galledou                        </span>
+            <br>
+            <small>Le 21 oct. 2016 à 20:57</small>
+        </div>
+        <div class="commentaire-text">
+            <p>je besoin des composants d'une alimentation stabilisée variable de 0v à 12v à la sortie ??
+
+</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9536)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 22 oct. 2016 à 17:33</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonsoir Dama galledou, il faut utiliser le montage avec le LM113 en plus du LM317 pour pouvoir descendre à 0V.</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9541)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Saffi                        </span>
+            <br>
+            <small>Le 23 oct. 2016 à 19:23</small>
+        </div>
+        <div class="commentaire-text">
+            <p>superbe ,merci beaucoup pour cette explication .</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 9551)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Maroly                        </span>
+            <br>
+            <small>Le 21 janv. 2017 à 11:14</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour . Merci pour ton poste.  Ce fut un coup de pouce. Je cherche un régulateur 12v / 2.5A. En fait j'ai un montage qui fonctionne sous 12v / 2.5vA. Je veux utiliser les batteries d'onduleur  12V. Mais il me semble que le courant débité est élevé pour mon montage.  Donc je veux maintenir la tension et réguler le courant I autour de 2.5A.</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 10034)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Nina-67                        </span>
+            <br>
+            <small>Le 23 janv. 2017 à 13:48</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Maroly, vous pouvez expérimenter le LM350 qui fait 3A. Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 10047)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn1.astuces-pratiques.fr/profile/photos/9063.jpg?t=1502633531" alt="14FRS570" width="30" height="30">                        <span class="pull-right">
+                            14FRS570                        </span>
+            <br>
+            <small>Le 13 août 2017 à 16:12</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour à toutes et tous. Un petit post pour vous signaler <u><strong>qu'une pile n'est en aucun cas rechargeable, ce n'est ni plus ni moins qu'une intention dangereuse. Risque d'explosions et de graves brulures</strong></u>. Tout comme mettre des piles au fours ou au réfrigérateur.<br>Les accus eux rechargeable de par leur conception.<br>A bon entendeur. Et à vos risques et périls.<br>Eric Dombey<br><br></p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 10529)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/9063.jpg?t=1502633531" alt="14FRS570" width="30" height="30">                        <span class="pull-right">
+                            14FRS570                        </span>
+            <br>
+            <small>Le 13 août 2017 à 16:13</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour à toutes et tous. Un petit post pour vous signaler <u><strong>qu'une 
+pile n'est en aucun cas rechargeable, ce n'est ni plus ni moins qu'une 
+intention dangereuse. Risque d'explosions et de graves brulures</strong></u>. Tout comme mettre des piles au fours ou au réfrigérateur.<br>Les accus eux rechargeable de par leur conception.<br>A bon entendeur. Et à vos risques et périls.<br>Eric Dombey<br></p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 10530)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/10220.jpg?t=1525157511" alt="Georges de Villette" width="30" height="30">                        <span class="pull-right">
+                            Georges de Villette                        </span>
+            <br>
+            <small>Le 1 mai 2018 à 08:58</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour tout le monde .<br>Peut on marier le schéma ( 0v / 30v ) avec les LM317 en parallèle ?<br>Si oui , peut on mettre plus de 2 LM317 ?<br>Merci de votre réponse .<br>Georges<br></p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11343)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 2 mai 2018 à 09:31</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Georges, j'ai trouvé ce schéma où les LM317 sont en parallèle. L'équilibrage des courants ne se fait pas forcément très bien. Lorsqu'un LM317 arrive à son courant maximum, sa tension de sortie chute légèrement jusqu'à ce qu'un autre LM317 vienne à son secours en parallèle, et de même pour le troisième. Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11344)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Slownners                        </span>
+            <br>
+            <small>Le 8 août 2018 à 11:44</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Salut,<br>Il me semble que la formule de Vout du premier montage est fausse. Lors de simulation elle ne marche pas..Personnellement j'ai déduit la formule suivante :Vout = (Vref/R1)*R2 <br>(Vref = 1.25V pour le LM317)Celle-ci fonctionne correctement.<br>Mais sinon super boulot ;)<br></p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11447)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 8 août 2018 à 14:25</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, non, la tension de sortie pour le régulateur de tension (montage le plus standard) vaut bien Vref&nbsp; x (1 + R2/R1). Le calcul repose sur l'égalité des courant dans R1 et R2 qui est défini par R1/Vref (Vref étant imposée par le LM317). La tension aux bornes de R2 vaut (loi d'Ohm) : U(R2) = R2 x I(R2) = R2 x Vref / R1. La tension de sortie vaut la somme des tension aux bornes de R1 et aux bornes de R2 (=U(R1)+U(R2))., et vaut donc :Vout = Vref&nbsp; + Vref x R2/R1 =&nbsp; Vref&nbsp; x (1 + R2/R1).&nbsp;<br>Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11448)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            JEROME63                        </span>
+            <br>
+            <small>Le 2 oct. 2018 à 12:36</small>
+        </div>
+        <div class="commentaire-text">
+            <p>bonjour,je&nbsp;souhaiterais pouvoir utiliser des accus de visseuse 18V dans des visseuses 14.4V. Pour faire simple&nbsp;je pensais utiliser 4-5 diodes en série mais dans ce cas plus moyen d'utiliser aussi les batteries d'origine en 14.4V.pensez vous qu'il existe une solution pas trop compliquée et surtout pas trop volumineuse pour y arriver&nbsp;(pas beaucoup de place libre dans le corps des machines)?Merci d'avance</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11521)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 2 oct. 2018 à 15:59</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, il n'existera pas de solution à base de LM317 parce qu'il fait chuter la tension d'au moins 2V et par ailleurs ne délivre que 1.5A, ce qui est un peu limite pour une visseuse. Le plus simple, c'est les 4-5 diodes (suffisamment grosses !) avec peut-être un interrupteur en parallèle pour les court-circuiter (si la batterie est une 14.4V). Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11522)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Dan57m                        </span>
+            <br>
+            <small>Le 7 nov. 2018 à 15:03</small>
+        </div>
+        <div class="commentaire-text">
+            <p> <a href="https://www.astuces-pratiques.fr/commentaire/regulateur-de-tension-lm317-montages_original.jpg" target="_blank"><img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/regulateur-de-tension-lm317-montages.jpg" alt="Régulateur de tension LM317 : montages" width="799" height="600"></a> <a href="https://www.astuces-pratiques.fr/commentaire/regulateur-de-tension-lm317-montages_0_original.jpg" target="_blank"><img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/commentaire/regulateur-de-tension-lm317-montages_0.jpg" alt="Régulateur de tension LM317 : montages" width="799" height="600"></a>bonjour Nina quelqu'un peut il m'aider&nbsp; à tester ce module de puissance machine à laver hoover vhd 814 en milieu de cycle toute alimentation à disparue plus de témoins rien ne ce passe&nbsp; après les premiers Control sécurité porte,&nbsp; platine de commande ,condensateur, ect ....tout est en bon état le 220v arrive bien sur la platine&nbsp; mais&nbsp; rien en sortie apparemment.&nbsp; ci joint photo de la platine recto verso dans l 'attente de vous lire merci&nbsp;</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11605)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 10 nov. 2018 à 16:49</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, excusez moi le retard de ma réponse. Il me semble voir un composant traversant pour la puissance (en vertical sur la photo) C'est peut être ce contrôleur qui est HS. Je pense que cette carte toute seule ne peut pas fonctionner. On ne voit pas de transfo d'alim à découpage. SUr le condensateur chimique, on doit trouver environ 320V continus (attention danger !). Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 11613)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            JBH30                        </span>
+            <br>
+            <small>Le 4 juil. 2019 à 12:10</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Nina,J'ai testé l'un de ces superbes montages, pour alimenter ma carte qui pilote deux moteurs pas à pas.<br>A vide, j'arrive à régler mon montage très précisément à 9V, mais dès que les moteurs entrent en jeu, la tension chute autour de 2.5 V (autant dire qu'ils ne bougent pas beaucoup !)Comment puis-je régler ce problème de chute de tension dû à la charge ? Sachant que les moteurs ne tournent pas en permanence !Merci d'avance !JB</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12195)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            JBH30                        </span>
+            <br>
+            <small>Le 4 juil. 2019 à 12:11</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Je précise que j'utilise un transfo AC240V vers DC 15V, 1.5A<br>JB</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12196)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn1.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 4 juil. 2019 à 17:17</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, il se peut que le courant fourni par l'adaptateur ne suffise pas. Mesurez la tension 15V et vérifiez si elle chute autour de 4,5V quand la sortie du LM317 chute autour de 2,5V. Si oui, c'est l'adaptateur qui n'est pas assez puissant. Si non, c'est que la limite du courant que peut donner le LM317 est atteinte. Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12199)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            JBH30                        </span>
+            <br>
+            <small>Le 4 juil. 2019 à 19:17</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Merci de votre réponse !<br>La tension en sortie de LM317 est à 2.5V environ, tandis qu'elle est toujours à 15V en sortie de transfo.<br>Dois-je faire un montage avec deux LM317 ?<br>Il me semblait que l'ampérage maxi était 1.5A ?<br>Bonne soirée, et merci,JB</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12200)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 5 juil. 2019 à 09:31</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, avez vous bien mis les condensateurs en entrée et en sortie du LM317 ? Vous pouvez aussi tenter le montage avec 2 LM317 en parallèle (le schéma avec les résistances 0.22 Ohm), ce qui permettra un courant double.</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12202)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Chevin                        </span>
+            <br>
+            <small>Le 23 août 2019 à 09:40</small>
+        </div>
+        <div class="commentaire-text">
+            <p>bonjour,le montage 10 , chargeur de batterie de voiture ,la sortie et de 13,8v , combien de voltage faut'il en entrée ? , j'ai calculé RS(1+r2/r1) soit 0.22x(1+2,2/220)=0.2222 je ne comprends pas merci ,</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12261)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 23 août 2019 à 13:49</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, la tension doit être au minimum de 16V, idéalement entre 16V et 20V pour limiter la dissipation du LM317. La tension de sortie vaut 1.25V x (1.2k+120)/120 = 13.75V (pour le calcul, négliger Rs). Rs sert à augmenter l'impédance de sortie, mais on peut s'en passer. Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12266)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Vince2corte                        </span>
+            <br>
+            <small>Le 17 nov. 2019 à 18:53</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour,
+Pour le montage de 2 LM317 en parallèle, je ne comprend pas l'intérêt des résistances R3 et R4 (0.22 ohm) quand la sortie alimente un appareil. A 1.5A pour chaque LM317, si on a par exemple une tension de 5V en sortie, cela signifie que l'on a une résistance équivalente à 1.6 ohm. Les 0.22 ohm ne me semblent pas servir à grand chose dans ce cas.
+Est-ce qu'elles ne sont utiles que pour les faibles intensités, voire quand rien n'est branché sur la sortie ?
+Ce n'est pas très pratique quand on veut une tension fixe avec une consommation variable... Auriez-vous une piste de solution à proposer (je suis très débutant) ?
+En tous cas, merci pour tous ces montages, c'est vraiment très utile !
+Merci d'avance.</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12566)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 18 nov. 2019 à 16:57</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, les résistances 0.22 Ohm équilibrent les courants de sortie de chacun des LM317. Si on relie directement, le LM317 qui délivre la tension la plus haute des deux donnera la totalité du courant alors que l'autre ne fera rien. La résistance de sortie est d'environ 0.11 Ohm (0.22//0.22 Ohm), ce qui est une valeur faible dans l'absolu. Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12571)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Vince2corte                        </span>
+            <br>
+            <small>Le 18 nov. 2019 à 19:22</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Merci pour la réaction rapide. C'est très sympa. Comme je suis débutant et têtu, je me dis que puisque je dispose de ces composant, autant que j'en mette 4 ou 5 en parallèle avec les mêmes valeurs de résistance : cela diminuera d'autant la chute en tension liée aux résistances de 0.22 ohm si je veux une valeur quasi fixe de la tension de sortie. C'est juste un cas théorique au cas ou j'aurais besoin d'un peu de puissance un de ces jours.
+Je suis tombé sur un article de "Electronique pratique" N° 179/p38 où il y a carrément 8 LM317 pour faire une alim de 12 A !</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12574)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn2.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 19 nov. 2019 à 15:03</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, oui en effet, vous pouvez mettre plusieurs LM317 en parallèle. Cordialement.</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 12576)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            @JBH30                        </span>
+            <br>
+            <small>Le 16 juin 2020 à 17:24</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Nina67 !
+J'ai réalisé le montage 5V 1A avec coupure en supprimant le module coupure qui ne me servira pas.
+Jai remplacé la résistance de 240Ω par un potentiomètre pour pouvoir avoir 5V pile et éviter d'être au dessus ou au dessous à cause des tolérances de composants.
+Le montage fonctionnement génialement bien, mais le Lm317 chauffe. 
+J'ai mis un petit radiateur 30*20*15mm que j'avais, mais au bout de 5mn, il est très chaud, difficile à toucher. 
+Le montage alimentera une Led 5V 1W de 7h le matin à 20h le soir à partir d'un transfo 12V.
+Est-ce normal ? Faut il un radiateur plus grand ?
+
+Merci d'avance, JB</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 13479)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn3.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 16 juin 2020 à 18:49</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour JB, oui c'est normal que le régulateur LM317 chauffe. Il faut un dissipateur plus grand ! Bonne soirée à vous</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 13480)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_2">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            @JBH30                        </span>
+            <br>
+            <small>Le 16 juin 2020 à 19:59</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Merci beaucoup !
+Bonne soirée également !
+JB</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 13484)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <span class="no-user"></span>
+                        <span class="pull-right">
+                            Radanz                        </span>
+            <br>
+            <small>Le 27 juin 2020 à 10:36</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour Nina,
+J'ai un projet de faire un abaisseur de tension 24V à 12V pour alimenter ensuite un convertisseur de 12V/230V. Ce montage avec LM317 peut-il faire l'affaire ou il faut que je pense à autre chose?
+
+Merci</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 13527)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="commentaire level_1">
+                <div class="commentaire-user">
+                            <img class="img-circle" src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/a.png" data-src="https://cdn1.astuces-pratiques.fr/profile/photos/24.jpg?t=1425657956" alt="nina67" width="30" height="30">                        <span class="pull-right">
+                            Nina67                        </span>
+            <br>
+            <small>Le 1 juil. 2020 à 12:24</small>
+        </div>
+        <div class="commentaire-text">
+            <p>Bonjour, non, ce n'est pas adapté, le LM317 va chauffer beaucoup et sera très limité en puissance. Il vaut mieux utiliser une alimentation à découpage abaisseur (step down Buck) qui peut fournir un courant élevé. Cordialement</p>
+            <button class="responsecomment" aria-label="Répondre" onclick="responsecomment(this, 13537)">Répondre</button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <section id="commentform" class="commentform">
+    <span class="commenttitle"></span>
+    <span class="commentinfo"></span>
+    <div class="alert-warning alert hidden"></div>
+    <span class="response hidden" onclick="removeresponse(this)" data-id=""></span>
+    <textarea id="comment" class="comment" name="comment" placeholder="Commentaire" cols="45" rows="8" maxlength="65525" required="required" aria-label="Commentaire"></textarea>
+    <div class="box">
+        <input type="file" name="inputfile" id="inputfile" class="inputfile" accept="image/jpeg, image/png">
+        <label for="inputfile"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg> <span>Ajouter une image</span></label>
+        <button class="removefile hidden" onclick="removefile()">×</button><button>
+    </button></div>
+
+
+            <input id="username" class="username" name="username" type="text" placeholder="Nom" size="30" maxlength="245" aria-label="Nom">
+        <input id="email" class="email" name="email" type="text" placeholder="Email" size="30" maxlength="100" aria-label="Email">
+        <button class="addcomment" aria-label="Ajouter un commentaire" onclick="commmentaireadd(this, 1223)">Soumettre le commentaire</button>
+    <div class="clearfix"></div>
+</section></section>
+        </main>
+                <aside>
+                <div class="top">
+    <div style="height: 322px;" align="center">
+        <div class="annonce"></div>
+                    <ins class="adsbygoogle" style="display:block; margin-bottom: 20px;" data-ad-client="ca-pub-7305140069236820" data-ad-slot="9690566924" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    </div>
+    <div class="title cat_2">
+        <span><svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1152-576q0-51-39-89.5t-89-38.5h-352q0-58 48-159.5t48-160.5q0-98-32-145t-128-47q-26 26-38 85t-30.5 125.5-59.5 109.5q-22 23-77 91-4 5-23 30t-31.5 41-34.5 42.5-40 44-38.5 35.5-40 27-35.5 9h-32v640h32q13 0 31.5 3t33 6.5 38 11 35 11.5 35.5 12.5 29 10.5q211 73 342 73h121q192 0 192-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5q32-1 53.5-47t21.5-81zm128-1q0 89-49 163 9 33 9 69 0 77-38 144 3 21 3 43 0 101-60 178 1 139-85 219.5t-227 80.5h-129q-96 0-189.5-22.5t-216.5-65.5q-116-40-138-40h-288q-53 0-90.5-37.5t-37.5-90.5v-640q0-53 37.5-90.5t90.5-37.5h274q36-24 137-155 58-75 107-128 24-25 35.5-85.5t30.5-126.5 62-108q39-37 90-37 84 0 151 32.5t102 101.5 35 186q0 93-48 192h176q104 0 180 76t76 179z" fill="#fff"></path></svg>&nbsp;&nbsp;&nbsp;Les plus partagés</span></div>
+
+        
+            <a href="https://www.astuces-pratiques.fr/electronique/testeur-de-continuite-a-2-led-schema" title="Testeur de continuité à 2 LED : schéma">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_testeur-de-continuite-a-2-led-schema-0.jpg" data-src="https://cdn2.astuces-pratiques.fr/image/electronique/testeur-de-continuite-a-2-led-schema/2_testeur-de-continuite-a-2-led-schema-0.jpg" alt="Testeur de continuité à 2 LED : schéma" title="Testeur de continuité à 2 LED : schéma" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Testeur de continuité à 2 LED : schéma</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/alimentation-a-transfo-pour-ampli-audio" title="Alimentation à transfo pour ampli audio ">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_alimentation-a-transfo-pour-ampli-audio-0.jpg" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/alimentation-a-transfo-pour-ampli-audio/2_alimentation-a-transfo-pour-ampli-audio-0.jpg" alt="Alimentation à transfo pour ampli audio " title="Alimentation à transfo pour ampli audio " width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Alimentation à transfo pour ampli audio </span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/le-boitier-dip" title="Le boitier DIP">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_le-boitier-dip-0.jpg" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/le-boitier-dip/2_le-boitier-dip-0.jpg" alt="Le boitier DIP" title="Le boitier DIP" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Le boitier DIP</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/panne-ronflette-sur-preampli-phono" title="Panne (ronflette) sur préampli phono">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_panne-ronflette-sur-preampli-phono-0.jpg" data-src="https://cdn2.astuces-pratiques.fr/image/electronique/panne-ronflette-sur-preampli-phono/2_panne-ronflette-sur-preampli-phono-0.jpg" alt="Panne (ronflette) sur préampli phono" title="Panne (ronflette) sur préampli phono" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Panne (ronflette) sur préampli phono</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/schema-riaa-phono-inverse" title="Schéma RIAA phono inverse">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_riaa-inverse-schema.png" data-src="https://cdn1.astuces-pratiques.fr/image/electronique/schema-riaa-phono-inverse/2_riaa-inverse-schema.png" alt="Schéma RIAA phono inverse" title="Schéma RIAA phono inverse" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Schéma RIAA phono inverse</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/filtre-actif-passe-bas-pour-caisson-de-basse" title="Filtre actif passe bas pour caisson de basse">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_filtre-actif-passe-bas-pour-caisson-de-basse-0.png" data-src="https://cdn1.astuces-pratiques.fr/image/electronique/filtre-actif-passe-bas-pour-caisson-de-basse/2_filtre-actif-passe-bas-pour-caisson-de-basse-0.png" alt="Filtre actif passe bas pour caisson de basse" title="Filtre actif passe bas pour caisson de basse" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Filtre actif passe bas pour caisson de basse</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/jeu-de-lumiere-2-x-300w-double-twist-realisation" title="Jeu de lumière 2 x 300w Double twist : réalisation">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_jeu-de-lumiere-2-x-300w-double-twist-realisation-1.jpg" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/jeu-de-lumiere-2-x-300w-double-twist-realisation/2_jeu-de-lumiere-2-x-300w-double-twist-realisation-1.jpg" alt="Jeu de lumière 2 x 300w Double twist : réalisation" title="Jeu de lumière 2 x 300w Double twist : réalisation" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Jeu de lumière 2 x 300w Double twist : réalisation</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/jeu-de-lumiere-moonflower-a-gobo-construction" title="Jeu de lumière Moonflower à gobo : construction">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_jeu-de-lumiere-moonflower-a-gobo-construction-0.jpg" data-src="https://cdn1.astuces-pratiques.fr/image/electronique/jeu-de-lumiere-moonflower-a-gobo-construction/2_jeu-de-lumiere-moonflower-a-gobo-construction-0.jpg" alt="Jeu de lumière Moonflower à gobo : construction" title="Jeu de lumière Moonflower à gobo : construction" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Jeu de lumière Moonflower à gobo : construction</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/ecoconception-dans-le-cycle-de-vie-d-un-produit-electronique" title="Ecoconception dans le cycle de vie d'un produit électronique">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_ecoconception-dans-le-cycle-de-vie-d-un-produit-electroniq.jpg" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/ecoconception-dans-le-cycle-de-vie-d-un-produit-electronique/2_ecoconception-dans-le-cycle-de-vie-d-un-produit-electronique-0.jpg" alt="Ecoconception dans le cycle de vie d'un produit électronique" title="Ecoconception dans le cycle de vie d'un produit électronique" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Ecoconception dans le cycle de vie d'un produit électronique</span>
+        </a>
+                    <a href="https://www.astuces-pratiques.fr/electronique/detecteur-de-fumee-principe-de-fonctionnement" title="Détecteur de fumée : principe de fonctionnement">
+            <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/2_principe-fonctionnement-detecteur-fumee.jpg" data-src="https://cdn3.astuces-pratiques.fr/image/electronique/detecteur-de-fumee-principe-de-fonctionnement/2_principe-fonctionnement-detecteur-fumee.jpg" alt="Détecteur de fumée : principe de fonctionnement" title="Détecteur de fumée : principe de fonctionnement" width="70" height="70">            <span class="categorie cat_2"></span>
+            <span class="toptext">Détecteur de fumée : principe de fonctionnement</span>
+        </a>
+                        <div class="users-rating" id="users-rating">
+            <div class="users-rating-picture">
+                <img src="R%C3%A9gulateur%20de%20tension%20LM317%20montages%20-%20Astuces%20Pratiques_fichiers/Trustpilot.png" alt="Astuces pratiques trustpilot" width="70" height="70">
+            </div>
+            <div class="users-rating-content">
+                <p class="users-rating-title"><span>astuces-pratiques.fr</span> est noté</p>
+                <div class="users-rating-stars-rating">
+                    <div class="users-rating-stars">
+                        <div class="users-rating-stars-score" style="width:92%;"></div>
+                    </div>
+                    <div class="users-rating-note">
+                        <span>4.6</span>/<span>5</span>
+                    </div>
+                    <span class="display-none">127</span>
+                    <span class="display-none">Trustpilot</span>
+                </div>
+                <p class="users-rating-baseline">par ses internautes. Merci !</p>
+            </div>
+
+        </div>
+    </div>
+<div class="adsensecontainerdiv">
+    <div class="annonce"></div>
+    <div class="adsense-static">
+            <ins class="adsbygoogle" style="display:block; margin-bottom: 20px;" data-ad-client="ca-pub-7305140069236820" data-ad-slot="3417967082" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    </div>
+    <div class="clearfix"></div>
+</div>
+        </aside>
+                <div class="clearfix"></div>
+    </div>
+    <!--<div id="trustpilote" class="modal"></div>-->
+    <footer id="footer" class="cat_2">
+    <div class="footer">
+                <p>Copyright © astuces-pratiques.fr 2007 - 2020 - Tous droits réservés</p>
+        <p>
+            <a href="https://www.astuces-pratiques.fr/plan-du-site" title="Plan du site">Plan du site</a>
+            <a href="https://www.astuces-pratiques.fr/mentionslegales" title="Mentions légales">Mentions légales</a>
+            <a href="https://www.astuces-pratiques.fr/cgu" title="Conditions générale d'utilisation">CGU</a>
+            <a href="https://www.astuces-pratiques.fr/contact" title="Contact">Contactez nous</a>
+            <a href="https://www.astuces-pratiques.fr/qui-sommes-nous" title="Qui sommes nous?">Qui sommes nous?</a>
+        </p>
+
+    </div>
+</footer>    <script type="application/javascript">  function createCookie(name,value,days) { if (days) { var date = new Date(); date.setTime(date.getTime()+(days*24*60*60*1000)); var expires = "; expires="+date.toGMTString(); } else var expires = ""; document.cookie = name+"="+value+expires+"; path=/"; } function readCookie(name) { var nameEQ = name + "="; var ca = document.cookie.split(';'); for(var i=0;i < ca.length;i++) { var c = ca[i]; while (c.charAt(0)==' ') c = c.substring(1,c.length); if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length); } return null; } function eraseCookie(name) { createCookie(name,"",-1); }  var ua = window.navigator.userAgent; var msie = ua.indexOf("MSIE "); var images = document.querySelectorAll('img[data-src]'); function preloadImage(img) { var src = img.getAttribute('data-src'); var srcset = img.getAttribute('data-srcset'); if(!src) { return; } img.src = src; if(!srcset) { return; } img.srcset = srcset; } var config = { rootMargin: '0px 0px 50px 0px', threshold: 0 }; if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) { for (var key in images) { var img = images[key]; if(typeof img == "object") { preloadImage(img); } } } else { var observer = new IntersectionObserver(function(entries, self) { for (var key in entries) { var entry = entries[key]; if(entry.isIntersecting) { preloadImage(entry.target); self.unobserve(entry.target); } } }, config); for (var key in images) { var img = images[key]; if(typeof img == "object") { observer.observe(img); } } }  var scripts = []; function loadScript(url, type , callback) { if(scripts.indexOf(url) < 0) { if(type == 'js') { var script = document.createElement("script"); script.type = "text/javascript"; script.async = true; } else if(type == 'css') { var script = document.createElement('link'); script.rel = 'stylesheet'; } if (script.readyState) { script.onreadystatechange = function () { if (script.readyState == "loaded" || script.readyState == "complete") { script.onreadystatechange = null; scripts.push(url); callback(); } }; } else { script.onload = function () { scripts.push(url); callback(); }; } if(type == 'js') { script.src = url; } else if(type == 'css') { script.href = url; } document.getElementsByTagName("head")[0].appendChild(script); } else { callback(); } }  var currentNote; function rate(element, note) { currentNote = note; var stars = document.getElementsByClassName('stars-rate'); for (i=0;i<stars.length;i++) { if((note-1) >= i) { if(!stars[i].classList.contains('star-full')) { stars[i].classList.add('star-full'); } stars[i].classList.remove('star-empty'); } else { if(!stars[i].classList.contains('star-empty')) { stars[i].classList.add('star-empty'); } stars[i].classList.remove('star-full'); } } document.getElementsByClassName('stars-btn')[0].classList.remove('hidden'); } function ratevalidate(element,ArticleId) { element.setAttribute('disabled', 'true'); loadScript('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', 'js' , function() { $.ajax({ type: "POST", cache: false, dataType: "json", data: {'id': ArticleId, 'rating': currentNote}, url: "/ajax/rating", success: function (data) { if (data.succes) { $('.star-empty-container').html('<div class="star-success">Votre avis a été pris en compte</div>'); } else { $('.star-empty-container').html("<div class='star-error'>Vous ne pouvez voter qu'une seule fois par article</div>"); } } }); }); }  function sharetwitter() { var text = document.getElementsByTagName("title")[0].innerHTML; var urltoshare = window.location.href; var url = "https://twitter.com/intent/tweet?text="+text+"&url="+encodeURIComponent(urltoshare); share(url, "Publier sur Twitter"); } function sharefacebook() { var text = document.getElementsByTagName("title")[0].innerHTML; var urltoshare = window.location.href; var url = "https://www.facebook.com/dialog/share?href="+encodeURIComponent(urltoshare)+"&text="+text+"&app_id=261754774768747&url="+encodeURIComponent(urltoshare); share(url, "Publier sur Facebook"); } function copy() { var dummy = document.createElement('input'), text = window.location.href; document.body.appendChild(dummy); dummy.value = text; dummy.select(); document.execCommand('copy'); document.body.removeChild(dummy); document.getElementById('copy').classList.toggle("clicked"); setTimeout(function() { document.getElementById('copy').classList.toggle("clicked"); }, 1000); } function share(url, name) { var new_window = window.open(url, name, 'toolbar=0,status=0scrollbars=no,'); }  function responsecomment(element, CommentId) { var formelement = document.getElementsByClassName('maincontainer active')[0].getElementsByClassName('response')[0]; formelement.setAttribute("data-id", CommentId); formelement.classList.remove('hidden'); var el = document.getElementsByClassName('maincontainer active')[0].getElementsByClassName('commentform')[0]; el.scrollIntoView({behavior: 'smooth'}); } function removeresponse(element) { element.setAttribute("data-id", ""); element.classList.add('hidden'); } var input,label, labelVal; input = document.getElementsByClassName('maincontainer active')[0].getElementsByClassName('inputfile')[0]; label = input.nextElementSibling, labelVal = label.innerHTML; input.addEventListener( 'change', function( e ) { var fileName = ''; if( this.files && this.files.length > 1 ) fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length ); else fileName = e.target.value.split( '\\' ).pop(); if( fileName ) { label.querySelector( 'span' ).innerHTML = fileName+ ''; document.getElementsByClassName('maincontainer active')[0].getElementsByClassName('removefile')[0].classList.remove('hidden'); } else label.innerHTML = labelVal; }); input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); }); input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); }); function removefile() { input.value = ""; input.nextElementSibling.querySelector( 'span' ).innerHTML = "Ajouter une image"; document.getElementsByClassName('maincontainer active')[0].getElementsByClassName('removefile')[0].classList.add('hidden'); } function validateEmail(email) { var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; return re.test(String(email).toLowerCase()); } var commentForm; var currentElement; function commmentaireadd(element, ArticleId) { currentElement = element; element.setAttribute('disabled', 'true'); commentForm = document.getElementsByClassName('maincontainer active')[0]; var commentaire = commentForm.getElementsByClassName('comment')[0].value; var username = commentForm.getElementsByClassName('username')[0].value; var email = commentForm.getElementsByClassName('email')[0].value; var after = commentForm.getElementsByClassName('response')[0].getAttribute("data-id"); var file = commentForm.getElementsByClassName("inputfile")[0].files[0]; var article_id = ArticleId; console.log(commentForm.getElementsByClassName("inputfile")); if(commentaire) { if(username) { if(email && validateEmail(email)) { console.log('email ok'); var formData = new FormData(); formData.append('username', username); formData.append('email', email); formData.append('commentaire', commentaire); formData.append('after', after); formData.append('file', file); formData.append('article_id', article_id); var xhr = new XMLHttpRequest(); xhr.open('POST', '/ajax/comment'); xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); xhr.onload = function() { if (xhr.status === 200) { var data = JSON.parse(xhr.responseText); if(data.succes) { setalert(commentForm, 'Commentaire ajouté avec succès', 0); } else { setalert(commentForm, data.error, 1); } } else if (xhr.status !== 200) { console.log('Request failed. Returned status of ' + xhr.status); } }; xhr.send(formData); } else { setalert(commentForm, 'Veuillez renseigner une adresse email valide', 1); } } else { setalert(commentForm, 'Veuillez renseigner un nom/pseudo (min. 6 caractères)', 1); } } else { setalert(commentForm, 'Votre commentaire ne peut être vide', 1); } } function setalert(commentForm, mess, error) { if(!error) { commentForm.getElementsByClassName('commentform')[0].innerHTML = '<div class="alert-success alert">'+mess+'</div>'; } else { var alert = commentForm.getElementsByClassName('alert')[0]; alert.innerHTML = mess; alert.classList.remove('hidden'); currentElement.disabled = false; } }  var hasLaunchedNot = false; var _nAdzq = _nAdzq || []; var nextIndex = 0; var currentIndex = 0; var distanceFromEnd = 200; var articles = []; var currentUrl; var currentTitle; var nextUrl; var nextTitle; var toLoad = true; var shareWidth = document.getElementsByTagName('article')[0].clientWidth; document.getElementsByClassName('social')[0].setAttribute("style","width:"+shareWidth+"px"); function resize() { shareWidth = document.getElementsByTagName('article')[0].clientWidth; document.getElementsByClassName('maincontainer active')[0].getElementsByClassName('social')[0].setAttribute("style","width:"+shareWidth+"px"); } window.onresize = resize; window.onscroll = function(e) { e.preventDefault(); var _windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; var header = document.getElementsByClassName('header')[0]; var menu = document.getElementsByClassName('menu')[0]; var headerHeight = header.innerHeight || header.clientHeight; var menuHeight = menu.innerHeight || menu.clientHeight; var _headerHeight = (headerHeight + menuHeight + 20); var activeContainer = document.getElementsByClassName('maincontainer active')[0]; var activeContainerHeight = activeContainer.innerHeight || activeContainer.clientHeight || activeContainer.clientHeight; var _activeContainerFrom = (activeContainer.offsetTop - _headerHeight); var _activeContainerTo = (activeContainer.offsetTop + activeContainerHeight); var activeContainerSocial = activeContainer.getElementsByClassName('social')[0]; var _activeContainerSocialFrom = activeContainerSocial.offsetTop + activeContainer.offsetTop - headerHeight; var _activeContainerSocialTo = (activeContainer.offsetTop + activeContainer.getElementsByTagName('article')[0].clientHeight - Math.floor(_windowHeight/2)); var activeContainerSidebar = activeContainer.getElementsByClassName('top')[0]; var _activeContainerSidebarFrom = activeContainerSidebar.clientHeight + activeContainer.offsetTop - headerHeight; var _activeContainerSidebarTo = (activeContainer.offsetTop + activeContainer.getElementsByTagName('article')[0].clientHeight - _windowHeight/2); var _scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop; var footer = document.getElementById('footer').classList; if(currentIndex == 0 && footer.contains('navbar-fixed-bottom')) { footer.remove("navbar-fixed-bottom"); } else if(currentIndex > 0 && !footer.contains('navbar-fixed-bottom')) { footer.add("navbar-fixed-bottom"); } if(_scrollPos >= _activeContainerSidebarFrom && _scrollPos <= _activeContainerSidebarTo) { var sidebar = activeContainer.getElementsByClassName('adsense-static'); if(sidebar.length != 0 && !sidebar[0].classList.contains('fixed')) { resize(); sidebar[0].classList.add('fixed'); } } else { var sidebar = document.getElementsByClassName('adsense-static fixed'); if(sidebar.length != 0) { sidebar[0].classList.remove('fixed'); } } if(_scrollPos >= _activeContainerSocialFrom && _scrollPos <= _activeContainerSocialTo) { var social = activeContainer.getElementsByClassName('social'); if(social.length != 0 && !social[0].classList.contains('fixed')) { resize(); social[0].classList.add('fixed'); } } else { var social = document.getElementsByClassName('social fixed'); if(social.length != 0) { social[0].classList.remove('fixed'); } } if ((_windowHeight + _scrollPos) >= (document.body.offsetHeight - distanceFromEnd) && toLoad) { toLoad = false; loadScript('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', 'js' , function() { if(articles.length == 0) { articles.push($(document).find('article').attr('data-url')); } nextIndex++; console.log($(document).find('body .maincontainer').eq(nextIndex).length); if($(document).find('body .maincontainer').eq(nextIndex).length === 0) { $(document).find('.alisting').each(function( index ) { if(articles.indexOf($( this ).attr('href')) < 0) { articles.push($( this ).attr('href')); nextUrl = $(this).attr('href'); nextTitle = $(this).attr('title'); return false; } }); $.ajax({ url: nextUrl, dataType: "html", success: function(response) { var html = '<div class="maincontainer container" data-url="'+nextUrl+'" data-title="'+encodeURIComponent($(response).find("h1").html())+'">'+$(response).find("main").parent('.maincontainer').html()+'</div>'; $(html).insertAfter($(document).find('body .maincontainer').last()); var images = document.querySelectorAll('[data-src]'); var ua = window.navigator.userAgent; var msie = ua.indexOf("MSIE "); if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) { for (var key in images) { var img = images[key]; if(typeof img == "object") { preloadImage(img); } } } else { for (var key in images) { var img = images[key]; if(typeof img == "object") { observer.observe(img); } } } } }); } else { var element = $(document).find('body .maincontainer').eq(nextIndex); nextUrl = element.attr('data-url'); nextTitle = decodeURIComponent(element.attr('data-title')); } }); } if(_scrollPos >=_activeContainerTo) { console.log('on avance'); currentIndex++; _changePage(); toLoad = true; } else if(_scrollPos < _activeContainerFrom) { console.log('on recule'); if(currentIndex > 0) { currentIndex--; } _changePage(); } }; function _changePage() { document.getElementsByClassName('maincontainer active')[0].classList.remove('active'); var currentElement = document.getElementsByClassName('maincontainer')[currentIndex]; currentElement.classList.add('active'); document.title = decodeURIComponent(currentElement.getAttribute('data-title')); window.history.pushState(null, document.title, currentElement.getAttribute('data-url')); gtag('config', 'GA_MEASUREMENT_ID', {'page_path': currentElement.getAttribute('data-url')}); }  var loginmodal; var close; function login() { loginmodal = document.getElementById('login'); if(!loginmodal) { var xhr = new XMLHttpRequest(); xhr.open('POST', '/ajax/login', true); xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); xhr.onload = function() { if (xhr.status === 200) { var data = JSON.parse(xhr.responseText); var div = document.createElement('div'); div.innerHTML = data.output; document.body.appendChild(div); loginmodal = document.getElementById('login'); close = document.getElementsByClassName("close")[0]; window.onclick = function(event) { if (event.target == loginmodal) { loginmodal.style.display = "none"; } }; close.onclick = function() { loginmodal.style.display = "none"; }; document.getElementById('identifiant').addEventListener("keyup", function(event) { if (event.keyCode === 13) { event.preventDefault(); identification() } }); document.getElementById('password').addEventListener("keyup", function(event) { if (event.keyCode === 13) { event.preventDefault(); identification() } }); document.getElementById('loginbtn').onclick = function(e){ identification(); }; loginmodal.style.display = "block"; } else if (xhr.status !== 200) { console.log('Request failed. Returned status of ' + xhr.status); } }; xhr.send(); } else { loginmodal.style.display = "block"; } } function identification() { var formData = new FormData(); formData.append('username', document.getElementById('identifiant').value); formData.append('password', document.getElementById('password').value); var xhr = new XMLHttpRequest(); xhr.open('POST', '/users/login'); xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); xhr.onload = function() { if (xhr.status === 200) { var data = JSON.parse(xhr.responseText); if(data.succes) { document.location.reload(true); } else { document.getElementById('login').getElementsByClassName('alert')[0].innerHTML = data.error; document.getElementById('login').getElementsByClassName('alert')[0].classList.remove('hidden'); } } else if (xhr.status !== 200) { console.log('Request failed. Returned status of ' + xhr.status); } }; xhr.send(formData); }  function mouseoverMenu(element) { element.classList.add("open"); } function mouseleaveMenu(element) { element.classList.remove("open"); }  var searchinput = document.getElementById('search'); function searchvalidation() { var searchText = searchinput.value; if (search) { document.location.href="/search?q="+encodeURIComponent(searchText); } } searchinput.addEventListener("keyup", function(event) { if (event.keyCode === 13) { event.preventDefault(); searchvalidation() } });  </script>    
+
+</body></html>

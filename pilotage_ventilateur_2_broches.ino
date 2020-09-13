@@ -4,8 +4,7 @@
 #define PWM_PIN     9
 #define SENSOR1 A0
 #define SENSOR2 A1
-#define PRINTF_MAX_FLOAT 2
-#define SEUIL_DECLENCHEMENT 35
+#define SEUIL_DECLENCHEMENT 34.5
 
 LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
 
@@ -156,6 +155,7 @@ void loop() {
       Serial.println();
     }
   }
+  LCD.clear();
 }
 
 

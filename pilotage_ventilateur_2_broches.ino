@@ -1,16 +1,19 @@
 #include <LiquidCrystal.h>
 #include <LibPrintf.h>
 
-#define PWM_PIN     9
+#define PWM_PIN     6//9
 #define SENSOR1 A0
 #define SENSOR2 A1
-#define SEUIL_DECLENCHEMENT 34.5
+#define SEUIL_MAX 79
+#define SEUIL_DECLENCHEMENT 33
+#define DELAY 62.55
 
 LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
 
 void setup()
 {
   Serial.begin(9600);
+  analogReference(EXTERNAL);
   Serial.println();
   Serial.println("FAN CONTROL");
   LCD.begin(16, 2);
@@ -21,72 +24,58 @@ void setup()
   delay(1000);
   LCD.clear();
 
-  TCCR1B = TCCR1B & B11111000 | B00000101; //permet le réglage de la fréquence du PWM le mieux pour le ventilateur Nidec ultraflo est de se raprocher de la fréquence du courant qui est normalement en sortie d'une alimentation
+
+  //permet le réglage de la fréquence du PWM le mieux pour le ventilateur Nidec ultraflo est de se raprocher de la fréquence du courant qui est normalement en sortie d'une alimentation
+  //ATTENTION!!!!
+  //Le TCCR0B change également la fréquence des delay
+  //le delay est multiplié par environ 10 avec la valeur suivante
+  TCCR0B = TCCR0B & B11111000 | B00000101; // for PWM frequency of 61.04 Hz
+  TCCR1B = TCCR1B & B11111000 | B00000101; // for PWM frequency of 30.64 Hz
 
   digitalWrite(PWM_PIN, LOW);
   pinMode(PWM_PIN, OUTPUT);
 
-  LCD.setCursor(3, 0);
+
+  Serial.println();
+  Serial.println("Lancement 100%");
+  LCD.setCursor(4, 0);
   LCD.print("ATTENTION");
-  LCD.setCursor(0, 1);
+  LCD.setCursor(1, 1);
   LCD.print("Lancement 100%");
   analogWrite(PWM_PIN, 254);
-  delay(1222);
+  delay(DELAY);
   LCD.clear();
-  analogWrite(PWM_PIN, 0);
+
 }
 
-float CalculTempLM61(int ra) {
-  float temp;
+float CalculMesureTempLM61(int ra, int sensorNumber) {
+  float mesureTemp;
 
+  mesureTemp = 3.3;//tension de référence interne si par defaut
+  mesureTemp /= 1023;
+  mesureTemp *= ra;
+  mesureTemp *= 1000;
+  mesureTemp -= 600;
+  mesureTemp /= 10;
 
   Serial.println();
-  Serial.println("calcul temp via LM61");
-  Serial.println(ra);
-  temp = 5;
-  temp /= 1023;
-  temp *= ra;
-  temp *= 1000;
-  temp -= 600;
-  temp /= 10;
-  //temp -= 1;
-  //je soustrais 1°C car différence avec les valeurs prélevée par 3 autres appareils complètement indépendant,
-  //cela est peut être du au fait que le capteur soit dans une coque.
-  Serial.print(temp, 1);
-  Serial.println("°C");
-  Serial.println();
-  return temp;
-}
+  //  Serial.println("calcul mesureTemp via LM61");
+  printf("Valeur numérique lu via LM61 sur le port A%d : %d\nConvertion en degrés Celcius : %f°C\n", sensorNumber, ra, mesureTemp);
 
-float CalculTempLM19(int ra) {
-  float temp;
-  Serial.println("calcul temp via LM19");
-  Serial.print("Valeur lu : ");
-  Serial.println(ra);
-  temp = 5;
-  temp /= 1023;
-  temp *= ra;
-  temp = 1.8639 - temp;
-  temp *= pow(10, 6);
-  temp /= 3.88;
-  temp += 2.1962 * pow(10, 6);
-  temp = sqrt(temp);
-  temp -= 1481.96;
-
-  Serial.println(temp, 1);
-  return temp;
+  return mesureTemp;
 }
 
 
-void AffichageTemp(float temp1, float temp2) {
+
+void AffichageTemp(float tempS1, float tempS2) {
   Serial.println();
   Serial.println();
-  printf("T1 : %f;\nT2: %f", temp1, temp2);
+  printf("T1 : %f;\nT2: %f", tempS1, tempS2);
   LCD.setCursor(0, 1);
   LCD.print("T1:");
-  LCD.print(temp1, 1);
+  LCD.print(tempS1, 1);
   LCD.print("  T2:");
-  LCD.print(temp2, 1);
+  LCD.print(tempS2, 1);
 }
 
 
@@ -95,43 +84,59 @@ void loop() {
   float tempS1, tempS2, moyTemp, tampon;
 
 
-  tempS1 = CalculTempLM61(analogRead(SENSOR1));
-  tempS2 = CalculTempLM61(analogRead(SENSOR2));
+  tempS1 = CalculMesureTempLM61(analogRead(SENSOR1), 1);
+  tempS2 = CalculMesureTempLM61(analogRead(SENSOR2), 2);
 
   moyTemp = tempS1 + tempS2;
   moyTemp /= 2;
   if (tempS1 < 0 || tempS2 < 0) {
+    analogWrite(PWM_PIN, 0);
     Serial.println();
-    Serial.println("température trop basse ou erronée");
+    Serial.println("température  erronée");
+    printf("T1: %d°C ; T2: %d°C", tempS1, tempS2);
     Serial.println();
+    LCD.setCursor(0, 0);
+    LCD.print("Attention!!");
+    LCD.setCursor(0, 1);
+    LCD.print("Thermal Error");
+    delay(DELAY);
   } else {
     if (tempS1 < SEUIL_DECLENCHEMENT) {
-      Serial.println();
-      printf("température infèrieure au seuil fixé : %d", SEUIL_DECLENCHEMENT);
       pwm = 0;
+      Serial.println();
+      printf("Température infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
+      Serial.println();
+
+    }
+    else if (tempS1 > SEUIL_MAX) {
+      pwm = 100;
+      Serial.println();
+      printf("Température au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
+      Serial.println();
+
     }
     else {
       //pwm = -300.951+94.532*log(tempS1);
       tampon = log(tempS1);
-      tampon *= 94.532;
-      tampon -= 300.951;
+      tampon *= 98.636;
+      tampon -= 315.835;
       pwm = tampon;
-      printf("tampon %f\n",tampon);
-      printf("pwm %d",pwm);
-      Serial.println();
+      //printf("tampon %f\n", tampon);
+      //printf("pwm %d%", pwm);
+      //Serial.println();
     }
     Serial.print("Moyenne température : ");
     Serial.print(moyTemp);
     Serial.println("°C");
 
     pwmGpio = pwm * 2.54;
-    printf("pwm = %d%\npwmGpio = %d", pwm, pwmGpio);
+    printf("pwm = %d%%\npwmGpio = %d", pwm, pwmGpio);
 
     if (pwm < 0 || pwm > 100) {
       pwmGpio = 0;
       Serial.println();
       LCD.clear();
-      printf("Arret des ventilateur\nValeur non admise temp=%d pwm=%d", tempS1, pwm);
+      printf("Arret des ventilateur\nValeur non admise pwm n'est plus compris entre 0 et 100%\ntemp=%d pwm=%d", tempS1, pwm);
 
       LCD.setCursor(0, 0);
       LCD.print("Attention T1=");
@@ -141,90 +146,19 @@ void loop() {
       LCD.print("pwm ");
       LCD.print(pwm);
       LCD.print("%");
-      delay(1000);
+      delay(DELAY);
       LCD.clear();
     }
     else {
-      LCD.setCursor(0, 0);
-      LCD.print(" Alim ==> ");
+      LCD.setCursor(2, 0);
+      LCD.print("Alim ==>  ");
       LCD.print(pwm);
       LCD.print("%");
       AffichageTemp(tempS1, tempS2);
       analogWrite(PWM_PIN, pwmGpio);
-      delay(850);
+      delay(DELAY);
       Serial.println();
     }
-  }
-  LCD.clear();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void old_loop()
-{
-  int pwm, pwmGpio;
-  float tempS1, tempS2, moyTemp;
-
-
-  for (pwm = 30 ; pwm <= 100 ; pwm += 10) {
-    tempS1 = CalculTempLM61(analogRead(SENSOR1));
-    tempS2 = CalculTempLM61(analogRead(SENSOR2));
-
-    moyTemp = tempS1 + tempS2;
-    moyTemp /= 2;
-    Serial.print("Moyenne température : ");
-    Serial.print(moyTemp);
-    Serial.println("°C");
-
-
-    Serial.print(pwm);
-    Serial.print("%: (");
-    pwmGpio = pwm * 2.54;
-    Serial.print(pwmGpio);
-    Serial.print(") ");
-    LCD.setCursor(0, 0);
-    LCD.print(" Alim ==> ");
-    LCD.print(pwm);
-    LCD.print("%");
-    AffichageTemp(tempS1, tempS2);
-    analogWrite(PWM_PIN, pwmGpio);
-    delay(850);
-    Serial.println();
-  }
-  for (pwm = 95 ; pwm >= 35 ; pwm -= 10) {
-    tempS1 = CalculTempLM61(analogRead(SENSOR1));
-    tempS2 = CalculTempLM61(analogRead(SENSOR2));
-
-    moyTemp = tempS1 + tempS2;
-    moyTemp /= 2;
-    Serial.print("Moyenne température : ");
-    Serial.print(moyTemp);
-    Serial.println("°C");
-    Serial.print(pwm);
-    Serial.print("%: (");
-    pwmGpio = pwm * 2.54;
-    Serial.print(pwmGpio);
-    Serial.print(") ");
-    LCD.setCursor(0, 0);
-    LCD.print(" Alim <== ");
-    LCD.print(pwm);
-    LCD.print("%");
-    AffichageTemp(tempS1, tempS2);
-    analogWrite(PWM_PIN, pwmGpio);
-    delay(1000);
-    Serial.println();
-
   }
   LCD.clear();
 }

@@ -6,7 +6,7 @@
 #define SENSOR2 A2
 #define SEUIL_MAX 64
 #define SEUIL_DECLENCHEMENT 33
-#define DELAY 116//delay de 61.04~=1s en réel
+#define DELAY 120//delay de 60~=1.2s en réel
 
 LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
 
@@ -43,7 +43,7 @@ void setup()
   LCD.setCursor(1, 1);
   LCD.print("Lancement 100%");
   analogWrite(PWM_PIN, 254);
-  delay(DELAY);
+  delay(DELAY * 1.2);
   LCD.clear();
 
 }
@@ -101,39 +101,34 @@ void loop() {
     LCD.print("Thermal Error");
     delay(DELAY);
   } else {
-    if (tempS1 < SEUIL_DECLENCHEMENT) {
+    if ((tempS1 < SEUIL_DECLENCHEMENT) && (tempS2 < SEUIL_DECLENCHEMENT)) {
       pwm = 0;
       Serial.println();
-      printf("Température1 infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
+      printf("Température infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
       Serial.println();
 
     }
-    else if (tempS2 < SEUIL_DECLENCHEMENT) {
-      pwm = 0;
-      Serial.println();
-      printf("Température2 infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
-      Serial.println();
-
-    }
-    else if (tempS1 > SEUIL_MAX) {
+    else if (tempS1 > SEUIL_MAX && tempS2 > SEUIL_MAX) {
       pwm = 100;
       Serial.println();
-      printf("Température1 au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
-      Serial.println();
-
-    }
-    else if (tempS2 > SEUIL_MAX) {
-      pwm = 100;
-      Serial.println();
-      printf("Température2 au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
+      printf("Température au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
       Serial.println();
 
     }
     else {
-      //pwm = -347,907+107.699*log(tempS1);
-      tampon = log(tempS1);
-      tampon *= 107.699;
-      tampon -= 347,907;
+      //pwm = -347,907+107.699*log(température);
+
+      if (tempS1 < tempS2) {
+        tampon = tempS2;
+        Serial.println("tempS2");
+      }
+      else {
+        tampon = tempS1;
+        Serial.println("tempS1");
+      }
+      tampon = log(tampon);
+      tampon *= 143.81;
+      tampon -= 476.295;
       pwm = tampon;
       //printf("tampon %f\n", tampon);
       //printf("pwm %d%", pwm);

@@ -6,9 +6,13 @@
 #define SENSOR2 A2
 #define SEUIL_MAX 64
 #define SEUIL_DECLENCHEMENT 33
-#define DELAY 120//delay de 60~=1.2s en réel
+#define DELAY 250//delay de 60~=1.2s en réel
 
 LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
+
+unsigned long delayStart = 0;
+bool delayRunning = false;
+
 
 void setup()
 {
@@ -43,7 +47,7 @@ void setup()
   LCD.setCursor(1, 1);
   LCD.print("Lancement 100%");
   analogWrite(PWM_PIN, 254);
-  delay(DELAY * 1.2);
+  delay(DELAY / 3);
   LCD.clear();
 
 }
@@ -100,9 +104,20 @@ void loop() {
     LCD.setCursor(0, 1);
     LCD.print("Thermal Error");
     delay(DELAY);
-  } else {
+  }
+  else {
     if ((tempS1 < SEUIL_DECLENCHEMENT) && (tempS2 < SEUIL_DECLENCHEMENT)) {
       pwm = 0;
+      delayStart = millis();//lance un timer
+      delayRunning = true;
+      if (delayRunning && ((millis() - delayStart) >= 2500)) {
+        analogWrite(PWM_PIN, 0);
+        LCD.clear();
+        LCD.noDisplay();
+        Serial.println();
+        Serial.println("Mise en veille des ventillateurs et du LCD");
+      }
+      else delayRunning = false;
       Serial.println();
       printf("Température infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
       Serial.println();

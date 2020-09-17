@@ -3,10 +3,10 @@
 
 #define PWM_PIN     6//9
 #define SENSOR1 A0
-#define SENSOR2 A1
-#define SEUIL_MAX 79
+#define SENSOR2 A2
+#define SEUIL_MAX 64
 #define SEUIL_DECLENCHEMENT 33
-#define DELAY 62.55
+#define DELAY 116//delay de 61.04~=1s en réel
 
 LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
 
@@ -104,22 +104,36 @@ void loop() {
     if (tempS1 < SEUIL_DECLENCHEMENT) {
       pwm = 0;
       Serial.println();
-      printf("Température infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
+      printf("Température1 infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
+      Serial.println();
+
+    }
+    else if (tempS2 < SEUIL_DECLENCHEMENT) {
+      pwm = 0;
+      Serial.println();
+      printf("Température2 infèrieure au seuil fixé (%d°C)\nExtinction des ventilateurs (%d%%)", SEUIL_DECLENCHEMENT, pwm);
       Serial.println();
 
     }
     else if (tempS1 > SEUIL_MAX) {
       pwm = 100;
       Serial.println();
-      printf("Température au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
+      printf("Température1 au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
+      Serial.println();
+
+    }
+    else if (tempS2 > SEUIL_MAX) {
+      pwm = 100;
+      Serial.println();
+      printf("Température2 au delà du seuil maxi (%d°C)\nMarche forcée des ventilateurs à %d%% ", SEUIL_MAX, pwm);
       Serial.println();
 
     }
     else {
-      //pwm = -300.951+94.532*log(tempS1);
+      //pwm = -347,907+107.699*log(tempS1);
       tampon = log(tempS1);
-      tampon *= 98.636;
-      tampon -= 315.835;
+      tampon *= 107.699;
+      tampon -= 347,907;
       pwm = tampon;
       //printf("tampon %f\n", tampon);
       //printf("pwm %d%", pwm);

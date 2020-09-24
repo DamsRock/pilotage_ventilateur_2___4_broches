@@ -12,6 +12,8 @@ LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
 
 unsigned long delayStart = 0;
 bool delayRunning = false;
+int pwm, pwmGpio;
+float tempS1, tempS2, moyTemp, tempMax, tampon;
 
 
 void setup()
@@ -74,18 +76,17 @@ float CalculMesureTempLM61(int ra, int sensorNumber) {
 void AffichageTemp(float tempS1, float tempS2) {
   Serial.println();
   Serial.println();
-  printf("T1 : %f;\nT2: %f", tempS1, tempS2);
+  printf("T1 : %f;\nTM: %f", tempS1, tempS2);
   LCD.setCursor(0, 1);
   LCD.print("T1:");
   LCD.print(tempS1, 1);
-  LCD.print("  T2:");
+  LCD.print("  TM:");
   LCD.print(tempS2, 1);
 }
 
 
 void loop() {
-  int pwm, pwmGpio;
-  float tempS1, tempS2, moyTemp, tampon;
+
 
 
   tempS1 = CalculMesureTempLM61(analogRead(SENSOR1), 1);
@@ -93,11 +94,12 @@ void loop() {
 
   moyTemp = tempS1 + tempS2;
   moyTemp /= 2;
+  if (tempS1 > tempMax)tempMax = tempS1;
   if (tempS1 < 0 || tempS2 < 0) {
     analogWrite(PWM_PIN, 0);
     Serial.println();
     Serial.println("température  erronée");
-    printf("T1: %d°C ; T2: %d°C", tempS1, tempS2);
+    printf("T1: %f°C ; T2: %f°C ; tempMax: %f°C", tempS1, tempS2, tempMax);
     Serial.println();
     LCD.setCursor(0, 0);
     LCD.print("Attention!!");
@@ -131,7 +133,8 @@ void loop() {
 
     }
     else {
-      //pwm = -347,907+107.699*log(température);
+      //pourcentage pwm=-422,533+128,689*Ln(température)
+
 
       if (tempS1 < tempS2) {
         tampon = tempS2;
@@ -141,10 +144,14 @@ void loop() {
         tampon = tempS1;
         Serial.println("tempS1");
       }
+
+      
       tampon = log(tampon);
-      tampon *= 143.81;
-      tampon -= 476.295;
+      tampon *= 128,689;
+      tampon -= 422,533;
       pwm = tampon;
+
+      
       //printf("tampon %f\n", tampon);
       //printf("pwm %d%", pwm);
       //Serial.println();
@@ -152,12 +159,14 @@ void loop() {
     Serial.print("Moyenne température : ");
     Serial.print(moyTemp);
     Serial.println("°C");
+    printf("\nTemperature maxi : %f°C\n\n", tempMax);
 
     pwmGpio = pwm * 2.54;
     printf("pwm = %d%%\npwmGpio = %d", pwm, pwmGpio);
 
     if (pwm < 0 || pwm > 100) {
-      pwmGpio = 0;
+      if (pwm < 0)analogWrite(PWM_PIN, 0);
+      else analogWrite(PWM_PIN, 100);
       Serial.println();
       LCD.clear();
       printf("Arret des ventilateur\nValeur non admise pwm n'est plus compris entre 0 et 100%\ntemp=%d pwm=%d", tempS1, pwm);
@@ -178,7 +187,7 @@ void loop() {
       LCD.print("Alim ==>  ");
       LCD.print(pwm);
       LCD.print("%");
-      AffichageTemp(tempS1, tempS2);
+      AffichageTemp(tempS1, tempMax);
       analogWrite(PWM_PIN, pwmGpio);
       delay(DELAY);
       Serial.println();
